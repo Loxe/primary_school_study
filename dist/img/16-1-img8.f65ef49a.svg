@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="131.403" height="131.403" viewBox="0 0 131.403 131.403">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #66baff;
+        stroke-linejoin: round;
+        stroke-width: 3.6px;
+        stroke-dasharray: 12;
+      }
+
+      .cls-2 {
+        fill: #8ccbff;
+      }
+    </style>
+  </defs>
+  <g id="组_4599" data-name="组 4599" transform="translate(-1749.269 -1335.681)">
+    <rect id="矩形_2120" data-name="矩形 2120" class="cls-1" width="127.803" height="127.803" transform="translate(1751.069 1337.481)"/>
+    <rect id="矩形_2121" data-name="矩形 2121" class="cls-2" width="115.178" height="115.178" transform="translate(1757.381 1343.793)"/>
+  </g>
+</svg>

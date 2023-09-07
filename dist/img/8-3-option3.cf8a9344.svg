@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="185.362" height="188.036" viewBox="0 0 185.362 188.036">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffeec2;
+      }
+
+      .cls-2 {
+        fill: #db9469;
+      }
+
+      .cls-3 {
+        fill: #b86f42;
+      }
+
+      .cls-4 {
+        fill: #61bfff;
+      }
+
+      .cls-5 {
+        fill: #ff6969;
+      }
+
+      .cls-6 {
+        fill: #fff;
+        font-size: 12px;
+        font-family: MicrosoftYaHei-Bold, Microsoft YaHei;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="组_3477" data-name="组 3477" transform="translate(-667.919 -352.137)">
+    <rect id="矩形_1069" data-name="矩形 1069" class="cls-1" width="185.362" height="188.036" rx="11.982" transform="translate(667.919 352.137)"/>
+    <g id="组_3476" data-name="组 3476">
+      <rect id="矩形_1070" data-name="矩形 1070" class="cls-2" width="119.22" height="21.975" rx="3.187" transform="translate(700.989 499.259)"/>
+      <rect id="矩形_1071" data-name="矩形 1071" class="cls-3" width="6.22" height="111.266" transform="translate(740.589 387.994)"/>
+      <rect id="矩形_1072" data-name="矩形 1072" class="cls-3" width="6.22" height="111.266" transform="translate(774.956 387.994)"/>
+      <rect id="矩形_1073" data-name="矩形 1073" class="cls-2" width="119.22" height="9.641" rx="4.323" transform="translate(700.989 378.352)"/>
+      <rect id="矩形_1074" data-name="矩形 1074" class="cls-4" width="22.16" height="12.363" rx="6.181" transform="translate(767.336 474.534)"/>
+      <rect id="矩形_1075" data-name="矩形 1075" class="cls-5" width="22.16" height="12.363" rx="6.181" transform="translate(767.336 486.897)"/>
+      <text id="个位" class="cls-6" transform="translate(767.336 513.741)"><tspan x="0" y="0">个位</tspan></text>
+      <text id="十位" class="cls-6" transform="translate(733.904 513.741)"><tspan x="0" y="0">十位</tspan></text>
+    </g>
+  </g>
+</svg>

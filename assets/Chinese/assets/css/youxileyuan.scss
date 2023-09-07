@@ -1,0 +1,56 @@
+@charset "utf-8";
+.youxileyuan {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  iframe {
+    width: 96%;
+    height: 94%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    border: none;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .gameSelect {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .gameContent {
+      width: 95%;
+      height: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+
+      .eachGame {
+        background-size: 100% 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1%;
+
+        &:hover {
+          animation: scaleB 2s linear infinite;
+        }
+
+        img {
+          width: 120%;
+          max-width: 120%;
+          background-size: 100% 100%;
+          margin-top: -60%;
+        }
+      }
+    }
+  }
+}
+

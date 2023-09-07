@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="99.084" height="99.084" viewBox="0 0 99.084 99.084">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ad541e;
+      }
+
+      .cls-2 {
+        fill: #f8f2c6;
+      }
+    </style>
+  </defs>
+  <g id="组_2989" data-name="组 2989" transform="translate(-96.525 -1402.256)">
+    <g id="组_2988" data-name="组 2988">
+      <rect id="矩形_635" data-name="矩形 635" class="cls-1" width="99.084" height="99.084" rx="23.112" transform="translate(96.525 1402.256)"/>
+      <rect id="矩形_636" data-name="矩形 636" class="cls-2" width="87.295" height="85.314" rx="19.11" transform="translate(102.419 1409.141)"/>
+    </g>
+    <circle id="椭圆_921" data-name="椭圆 921" class="cls-1" cx="10.212" cy="10.212" r="10.212" transform="translate(115.403 1421.882)"/>
+    <circle id="椭圆_922" data-name="椭圆 922" class="cls-1" cx="10.212" cy="10.212" r="10.212" transform="translate(115.403 1462.839)"/>
+    <circle id="椭圆_923" data-name="椭圆 923" class="cls-1" cx="10.212" cy="10.212" r="10.212" transform="translate(156.36 1421.882)"/>
+    <circle id="椭圆_924" data-name="椭圆 924" class="cls-1" cx="10.212" cy="10.212" r="10.212" transform="translate(156.36 1462.839)"/>
+  </g>
+</svg>

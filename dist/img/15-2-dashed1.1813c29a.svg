@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="189.654" height="185.602" viewBox="0 0 189.654 185.602">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 7.417px;
+        stroke-dasharray: 18.542;
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <g id="矩形_3089" data-name="矩形 3089" class="cls-1">
+    <rect class="cls-2" width="189.654" height="185.602" rx="22.152"/>
+    <rect class="cls-3" x="3.708" y="3.708" width="182.237" height="178.185" rx="18.443"/>
+  </g>
+</svg>

@@ -1,0 +1,268 @@
+@import '../assets/css/index.css';
+
+/* 云 */
+.cloud {
+    position: absolute;
+    z-index: 2;
+}
+
+.cloud1 {
+    width: 10vw;
+    left: -10vw;
+    top: 14vw;
+    will-change: transform;
+    animation: c1 14s linear infinite;
+}
+
+@keyframes c1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(111vw, 0);
+    }
+}
+
+.cloud2 {
+    width: 11vw;
+    left: -11vw;
+    top: 7vw;
+    will-change: transform;
+    animation: c2 18s 5s linear infinite;
+}
+
+@keyframes c2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100vw, 0);
+    }
+}
+
+#topic {
+    width: 30vw;
+    height: 9vw;
+    color: maroon;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    top: 16vw;
+    left: 40vw;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+#topic img {
+    height: 65%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#topic .line{
+    height: 10vw;
+}
+.option-box {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    bottom: 15vw;
+}
+
+#list-box {
+    width: 52.4vw;
+    height: 5vw;
+    position: absolute;
+    left: 27.6vw;
+    bottom: 7vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#list-box li {
+    width: 28%;
+    height: 5vw;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-box li img {
+    height: 100%;
+}
+
+#colour-bar {
+    width: 10vw;
+    position: absolute;
+    left: 84vw;
+    bottom: 22.5vw;
+    display: none;
+}
+
+/* 舞台 */
+.stage {
+    position: absolute;
+    left: 50%;
+    bottom: 2vw;
+    transform: translateX(-50%);
+    width: 97%;
+    z-index: 6;
+}
+
+/* 小鸡 */
+#chook {
+    height: 10vw;
+}
+
+#chook-box {
+    height: 10vw;
+    /* height: 80px; */
+    position: absolute;
+    left: 10vw;
+    bottom: 16.5vw;
+    z-index: 2;
+}
+
+/* 小鸡跳跃 */
+.chook-box-jump {
+    will-change: transform;
+    animation: move 3.5s linear forwards;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(76vw, 0);
+    }
+}
+
+.chook-box-jump-err {
+    will-change: transform;
+    animation: move2 3s linear forwards;
+}
+
+@keyframes move2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(35vw, 0);
+    }
+    100% {
+        transform: translate(35vw, 0);
+    }
+}
+
+.correct {
+    will-change: transform;
+    animation: jump 3.5s linear forwards;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0, 0);
+    }
+    12% {
+        transform: translate(0, -3vw);
+    }
+    25% {
+        transform: translate(0, 2vw);
+    }
+    37% {
+        transform: translate(0, -5vw);
+    }
+    50% {
+        transform: translate(0, 1.5vw);
+    }
+    62% {
+        transform: translate(0, -3vw);
+    }
+    75% {
+        transform: translate(0, 1.5vw);
+    }
+    87% {
+        transform: translate(0, -4vw);
+    }
+    100% {
+        transform: translate(0, 0vw);
+    }
+}
+
+@keyframes chookCorrect2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    3% {
+        transform: translate(4vw, -1vw);
+    }
+    /* 一跳 */
+    10% {
+        transform: translate(15vw, -4vw);
+    }
+    16% {
+        transform: translate(17vw, 3vw) scale(1.1, 0.9);
+    }
+    /* 二跳 */
+    26% {
+        transform: translate(33vw, -8vw);
+    }
+    34% {
+        transform: translate(35vw, 1vw) scale(1.1, 0.9);
+    }
+    /* 三跳 */
+    38% {
+        transform: translate(48vw, -5vw);
+    }
+    41% {
+        transform: translate(56vw, -7vw);
+    }
+    49% {
+        transform: translate(58vw, 2vw) scale(1.1, 0.9);
+    }
+    /* 四跳 */
+    60% {
+        transform: translate(74vw, -3vw);
+    }
+    68% {
+        transform: translate(76vw, 1vw) scale(1.1, 0.9);
+    }
+    100% {
+        transform: translate(76vw, 1vw);
+    }
+}
+
+.error {
+    will-change: transform;
+    animation: chookError 3s linear forwards;
+}
+
+@keyframes chookError {
+    0% {
+        transform: translate(0, 0);
+    }
+    12% {
+        transform: translate(0, -3vw);
+    }
+    25% {
+        transform: translate(0, 3vw);
+    }
+    37% {
+        transform: translate(0, -5vw);
+    }
+    50% {
+        transform: translate(0, 0vw);
+    }
+    55% {
+        transform: translate(0, -2vw);
+    }
+    100% {
+        transform: translate(0, 19vw);
+    }
+}

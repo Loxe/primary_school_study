@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>语文（国家统编教材）一年级上</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/level3.css">
+    <link rel="stylesheet" href="../css/youxileyuan.css">
+</head>
+<body>
+<div id="level3" class="youxileyuan" data-file="common" data-img="background.jpg">
+    <div class="contain">
+        <div class="window" remw="10.4" remh="7.85">
+            <span class="bambooL" data-file="common" data-img="bambooL.png" remw="0.34" remh="7.61"></span>
+            <span class="bambooR" data-file="common" data-img="bambooR.png" remw="0.34" remh="7.61"></span>
+            <div class="screen trans" data-file="common" data-img="screen.png" remw="10.4" remh="7.85">
+                <div class="content">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="panda nature" data-file="common" data-img="panda.gif" remw="3.18" remh="2.55"></span>
+    <img id="leaf" class="leaf nature" src="../images/common/leaf/0.png"/>
+    <span class="bamboo nature" data-file="common" data-img="bamboo.png"></span>
+    <span audio-path="../audio/语文一音频/返回.mp3" class="return nature" data-file="common" data-img="back_text.png"
+          remw="1.89"
+          remh="1.63"></span>
+    <audio class="audio" src=""></audio>
+    <audio class="pangBaiAudio" src=""></audio>
+    <audio class="audioforvideo" src=""></audio>
+    <audio class="answerAudio" src=""></audio>
+</div>
+<script src="../js/Browser.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/imgLoad.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/config.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/loopImg.js"></script>
+<script src="../js/playAudio.js"></script>
+
+<script>
+var lesson = ''
+var index = 0
+$(window).on('load', function () {
+    saveChildPath()
+    imgLoad()
+    loopImg('leaf','../images/common/leaf','png',0,41,8000)
+    //所有按钮的音频绑定
+    playAudio()
+    var path = decodeURIComponent(getUrlParam('path'))
+    var text = getUrlParam('text')
+    var tip = getUrlParam('tip')
+    var time = getUrlParam('time')
+    var rule = getUrlParam('rule')
+    $('iframe').attr('src', path + '?text=' + text + '&time=' + time + '&tip=' + tip + '&rule=' + rule)
+})
+$('.return').on('click', function () {
+    window.history.back()
+    return false
+})
+
+</script>
+</body>
+</html>

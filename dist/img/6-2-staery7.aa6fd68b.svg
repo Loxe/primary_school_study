@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="133.198" height="107.499" viewBox="0 0 133.198 107.499">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #94c4ef;
+      }
+
+      .cls-2 {
+        fill: #427fb3;
+      }
+    </style>
+  </defs>
+  <g id="组_3058" data-name="组 3058" transform="translate(-1493.631 -1091.779)">
+    <path id="路径_7380" data-name="路径 7380" class="cls-1" d="M1626.829,1091.779l-133.2,15.18,14.435,92.319Zm-56.849,27.331-48.294,44.145-3.906-36.663Z"/>
+    <rect id="矩形_706" data-name="矩形 706" class="cls-2" width="1.771" height="11.772" rx="0.886" transform="translate(1599.169 1106.736) rotate(169.852)"/>
+    <rect id="矩形_707" data-name="矩形 707" class="cls-2" width="1.771" height="7.847" rx="0.886" transform="translate(1587.484 1104.118) rotate(167.178)"/>
+    <rect id="矩形_708" data-name="矩形 708" class="cls-2" width="1.771" height="11.772" rx="0.886" transform="translate(1577.936 1109.202) rotate(168.847)"/>
+    <rect id="矩形_709" data-name="矩形 709" class="cls-2" width="1.771" height="9.744" rx="0.886" transform="translate(1566.62 1108.307) rotate(169.852)"/>
+    <rect id="矩形_710" data-name="矩形 710" class="cls-2" width="1.771" height="11.772" rx="0.886" transform="matrix(-0.984, 0.176, -0.176, -0.984, 1555.52, 1111.324)"/>
+    <rect id="矩形_711" data-name="矩形 711" class="cls-2" width="1.771" height="10.152" rx="0.886" transform="matrix(-0.973, 0.232, -0.232, -0.973, 1545.13, 1111.251)"/>
+    <rect id="矩形_712" data-name="矩形 712" class="cls-2" width="1.771" height="11.772" rx="0.886" transform="translate(1532.166 1114.339) rotate(169.852)"/>
+    <rect id="矩形_713" data-name="矩形 713" class="cls-2" width="1.771" height="8.977" rx="0.268" transform="translate(1519.882 1113.2) rotate(169.852)"/>
+    <rect id="矩形_714" data-name="矩形 714" class="cls-2" width="1.771" height="12.627" rx="0.886" transform="translate(1508.208 1118.096) rotate(171.13)"/>
+  </g>
+</svg>

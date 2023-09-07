@@ -1,0 +1,128 @@
+@import '../assets/css/index.css';
+
+.pinyinTip {
+    width: 11vw;
+    height: 9vw;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 10%;
+}
+
+/* 靶子列表 */
+#target-list {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 25vw;
+    display: flex;
+    justify-content: center;
+}
+
+#target-list li {
+    width: 11vw;
+    height: 21vw;
+    text-align: center;
+    line-height: 16vw;
+    background: url('images/target.png') center no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 4%;
+}
+
+#target-list li img {
+    height: 5.5vw;
+    /*position: relative;*/
+    /*left: -0.5%;*/
+    /*bottom: 19.5%;*/
+}
+
+#target-list-click {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 25vw;
+    display: flex;
+    justify-content: center;
+}
+
+#target-list-click li {
+    width: 11vw;
+    height: 21vw;
+    cursor: pointer;
+}
+
+/* 靶子倒下 */
+.target-fall {
+    animation: targetFall 0.5s forwards;
+    transform-origin: 0% 100%;
+}
+
+@keyframes targetFall {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(90deg);
+    }
+}
+
+/* 小鸡 */
+#chick {
+    width: 20vw;
+    position: absolute;
+    left: 50vw;
+    bottom: 11vw;
+}
+
+/* 蛋 */
+#egg {
+    width: 5vw;
+    position: absolute;
+    bottom: 17vw;
+    opacity: 0;
+}
+
+.egg-fly {
+    opacity: 1 !important;
+    animation: eggFly 0.5s forwards;
+
+}
+
+@keyframes eggFly {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-26vw);
+    }
+}
+
+#pinyinTip {
+    width: 15vw;
+    height: 8vw;
+    text-align: center;
+    line-height: 10vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 8vw;
+    background-size: contain;
+}
+
+#stone img {
+    height: 5vw;
+}
+
+.bg-cover {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0vw;
+    width: 106%;
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="166.499" height="169.173" viewBox="0 0 166.499 169.173">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff7e3;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #b6ccd9;
+        stroke-miterlimit: 10;
+        stroke-width: 1.803px;
+        stroke-dasharray: 7.21;
+      }
+    </style>
+  </defs>
+  <g id="组_2581" data-name="组 2581" transform="translate(-548.905 -499.51)">
+    <rect id="矩形_333" data-name="矩形 333" class="cls-1" width="166.49" height="169.17" transform="translate(548.91 499.51)"/>
+    <line id="直线_58" data-name="直线 58" class="cls-2" x2="166.49" transform="translate(548.91 555.122)"/>
+    <line id="直线_59" data-name="直线 59" class="cls-2" x2="166.49" y2="0.856" transform="translate(548.91 611.903)"/>
+    <line id="直线_60" data-name="直线 60" class="cls-2" y2="168.63" transform="translate(660.545 500.054)"/>
+    <line id="直线_61" data-name="直线 61" class="cls-2" y2="168.63" transform="translate(603.765 500.054)"/>
+  </g>
+</svg>

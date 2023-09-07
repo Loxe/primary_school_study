@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1096" height="669" viewBox="0 0 1096 669">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffc638;
+      }
+
+      .cls-10, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #fef0e0;
+      }
+
+      .cls-4 {
+        fill: #d49e5f;
+      }
+
+      .cls-5 {
+        fill: #c79459;
+      }
+
+      .cls-6 {
+        fill: #ba6f38;
+      }
+
+      .cls-7 {
+        fill: #a7663f;
+      }
+
+      .cls-8 {
+        fill: #ffe99c;
+      }
+
+      .cls-9 {
+        fill: #eb764a;
+      }
+
+      .cls-10, .cls-11 {
+        font-size: 30px;
+        font-family: MicrosoftYaHei-Bold, Microsoft YaHei;
+        font-weight: 700;
+      }
+
+      .cls-11 {
+        fill: #815050;
+      }
+    </style>
+  </defs>
+  <g id="组_4927" data-name="组 4927" transform="translate(-92 4)">
+    <g id="组_4924" data-name="组 4924">
+      <rect id="矩形_3659" data-name="矩形 3659" class="cls-1" width="1096" height="628" rx="46" transform="translate(92 37)"/>
+      <g id="组_4921" data-name="组 4921">
+        <rect id="矩形_2329" data-name="矩形 2329" class="cls-2" width="819.143" height="236.84" transform="translate(127.027 96.181)"/>
+        <rect id="矩形_2330" data-name="矩形 2330" class="cls-3" width="816.038" height="184.692" transform="translate(127.027 96.181)"/>
+        <path id="路径_13065" data-name="路径 13065" class="cls-4" d="M163.52,251.178v-155H127.027V280.873Z"/>
+        <path id="路径_13066" data-name="路径 13066" class="cls-5" d="M163.52,251.178H912.007l34.163,29.7H127.027Z"/>
+        <path id="路径_13067" data-name="路径 13067" class="cls-4" d="M912.007,251.178v-155h34.163V280.873Z"/>
+      </g>
+      <g id="组_4922" data-name="组 4922">
+        <rect id="矩形_2331" data-name="矩形 2331" class="cls-2" width="819.143" height="236.84" transform="translate(127.027 375.392)"/>
+        <rect id="矩形_2332" data-name="矩形 2332" class="cls-3" width="816.038" height="184.692" transform="translate(127.027 375.392)"/>
+        <path id="路径_13068" data-name="路径 13068" class="cls-4" d="M163.52,530.388v-155H127.027V560.084Z"/>
+        <path id="路径_13069" data-name="路径 13069" class="cls-5" d="M163.52,530.388H912.007l34.163,29.7H127.027Z"/>
+        <path id="路径_13070" data-name="路径 13070" class="cls-4" d="M912.007,530.388v-155h34.163V560.084Z"/>
+      </g>
+    </g>
+    <g id="组_4925" data-name="组 4925" transform="translate(0 -43)">
+      <circle id="椭圆_2514" data-name="椭圆 2514" class="cls-3" cx="37.833" cy="37.833" r="37.833" transform="translate(983.315 367.846)"/>
+      <rect id="矩形_2337" data-name="矩形 2337" class="cls-6" width="62.207" height="14.954" rx="6.281" transform="translate(1028.624 374.575) rotate(90)"/>
+    </g>
+    <g id="组_6650" data-name="组 6650" transform="translate(0 -25)">
+      <g id="组_6650-2" data-name="组 6650" transform="translate(0 -20.599)">
+        <rect id="矩形_3662" data-name="矩形 3662" class="cls-7" width="290" height="71" rx="10" transform="translate(477 52.599)"/>
+        <rect id="矩形_3661" data-name="矩形 3661" class="cls-8" width="290" height="71" rx="10" transform="translate(477 41.599)"/>
+        <rect id="矩形_3660" data-name="矩形 3660" class="cls-9" width="290" height="71" rx="10" transform="translate(477 46.599)"/>
+      </g>
+      <text id="自_动_贩_卖_机" data-name="自 动 贩 卖 机" class="cls-10" transform="translate(529 72)"><tspan x="0" y="0">自 动 贩 卖 机</tspan></text>
+    </g>
+    <g id="组_4926" data-name="组 4926" transform="translate(0 -32)">
+      <rect id="矩形_2338" data-name="矩形 2338" class="cls-3" width="179.147" height="200.352" rx="20.815" transform="translate(975.343 132.335)"/>
+      <text id="小红带了9_元钱_准备_买3种不同_的饮料_" data-name="小红带了9
+元钱，准备
+买3种不同
+的饮料。" class="cls-11" transform="translate(993 181)"><tspan x="0" y="0">小红带了9</tspan><tspan x="0" y="40">元钱，准备</tspan><tspan x="0" y="80">买3种不同</tspan><tspan x="0" y="120">的饮料。</tspan></text>
+    </g>
+  </g>
+</svg>

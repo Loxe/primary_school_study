@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="147.018" height="122.816" viewBox="0 0 147.018 122.816">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #30c2c5;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="组_4598" data-name="组 4598" transform="translate(-1499.419 -1337.993)">
+    <path id="路径_12177" data-name="路径 12177" class="cls-1" d="M1627,1452.593v-.9l-9.649-16.112v25.233h-14.941v-50.2l-9.648-16.112v66.316h-15.014l.073-90.836h-9.508l-.078,90.836h-15.139v-66.316l-9.649,16.112v50.2H1528.5v-25.233l-9.649,16.112v.9l4.918,8.217h-24.356l73.509-122.816,73.509,122.816h-24.356Z"/>
+    <path id="路径_12178" data-name="路径 12178" class="cls-2" d="M1627,1451.688v.9l-4.918,8.217h-4.731v-25.233Z"/>
+    <path id="路径_12179" data-name="路径 12179" class="cls-2" d="M1602.409,1410.6v50.2h-9.648v-66.316Z"/>
+    <rect id="矩形_2118" data-name="矩形 2118" class="cls-2" width="9.511" height="90.836" transform="translate(1568.273 1369.973)"/>
+    <path id="路径_12180" data-name="路径 12180" class="cls-2" d="M1553.095,1394.493v66.316h-9.649v-50.2Z"/>
+    <path id="路径_12181" data-name="路径 12181" class="cls-2" d="M1528.5,1435.577v25.233h-4.731l-4.918-8.217v-.9Z"/>
+    <rect id="矩形_2119" data-name="矩形 2119" class="cls-1" width="117.194" height="10.765" transform="translate(1513.653 1450.044)"/>
+  </g>
+</svg>

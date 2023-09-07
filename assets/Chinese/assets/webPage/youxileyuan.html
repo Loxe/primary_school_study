@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>语文（国家统编教材）一年级上</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/level3.css">
+    <link rel="stylesheet" href="../css/youxileyuan.css">
+</head>
+<body>
+<div id="level3" class="youxileyuan" data-file="common" data-img="background.jpg">
+    <div class="contain">
+        <div class="window" remw="10.4" remh="7.85">
+            <span class="bambooL" data-file="common" data-img="bambooL.png" remw="0.34" remh="7.61"></span>
+            <span class="bambooR" data-file="common" data-img="bambooR.png" remw="0.34" remh="7.61"></span>
+            <div class="screen trans" data-file="common" data-img="screen.png" remw="10.4" remh="7.85">
+                <div class="content"></div>
+            </div>
+        </div>
+    </div>
+    <span class="panda nature" data-file="common" data-img="panda.gif" remw="3.18" remh="2.55"></span>
+    <img id="leaf" class="leaf nature" src="../images/common/leaf/0.png"/>
+    <span class="bamboo nature" data-file="common" data-img="bamboo.png"></span>
+    <span audio-path="../audio/语文一音频/返回.mp3" class="return nature" data-file="common" data-img="back_text.png"
+          remw="1.89"
+          remh="1.63"></span>
+    <audio class="audio" src=""></audio>
+    <audio class="pangBaiAudio" src=""></audio>
+    <audio class="audioforvideo" src=""></audio>
+    <audio class="answerAudio" src=""></audio>
+</div>
+<script src="../js/Browser.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/imgLoad.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/config.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/loopImg.js"></script>
+<script src="../js/playAudio.js"></script>
+
+<script>
+var lesson = ''
+var index = 0
+var currentBtn = 'youxi'
+var pageNumber = 1
+var pageSize = 0
+$(window).on('load', function () {
+    saveChildPath()
+    setContent(currentBtn)
+    imgLoad()
+    loopImg('leaf','../images/common/leaf','png',0,41,8000)
+    //所有按钮的音频绑定
+    playAudio()
+})
+
+function getLesson () {
+    var lessonId = getUrlParam('lessonId')
+    var name = getUrlParam('name')
+    menu.map(function (item) {
+        if (item.name != '汉语拼音') {
+            item.learn.map(function (page) {
+                page.map(function (s) {
+                    if (s.lessonId == lessonId && s.name == name) {
+                        lesson = s.lesson
+                    }
+                })
+            })
+        }
+    })
+}
+
+function setContent (key) {
+    getLesson()
+    var pages = lesson[key]
+    $('.content').html('')
+    pageSize = pages.length
+    buildPage()
+    for (var i = 0; i < pages.length; i++) {
+        var page = pages[i]
+        var content = page.content
+        var html = ''
+        switch (page.type) {
+            case 'gameSelect':
+                html = render.renderGameSelect(content)
+        }
+        $('.content .page:nth-child(' + (i + 1) + ')').html(html)
+    }
+    showPage(1)
+    remToPx()
+    imgLoad()
+}
+
+function showPage (png) {
+    pageNumber = png
+    remToPx()
+    var page = $('.content .page:nth-child(' + pageNumber + ')')
+    // 显示当前页
+    page.addClass('show').siblings().removeClass('show')
+    // 页面初始化停止音频。停止gif,停止视频
+    if ($('.gif')) {
+        $('.gif').attr('src', '')
+    }
+    $('video').trigger('pause')
+    $('audio').trigger('pause')
+    // 旁白
+    var hasPangBai = page.children().attr('data-pangbai-audio')
+    if (hasPangBai) {
+        $('.pangBaiAudio').attr('src', hasPangBai)
+        $('.pangBaiAudio').off('timeupdate')
+        $('.pangBaiAudio').on('timeupdate', function () {
+            if ($(this)[0].currentTime > 0) {
+                $(this)[0].muted = false
+            }
+        })
+        $('.pangBaiAudio').trigger('play')
+    } else {
+        initPageOption()
+    }
+}
+
+// 当前页的初始化操作
+function initPageOption () {
+    var page = $('.content .page:nth-child(' + pageNumber + ')')
+    var type = page.children().attr('class')
+    // var children = page.children()
+    if (type === 'gameSelect') {
+        // children.find('video').attr('src', children.find('video').attr('data-video'))
+        // children.find('video').trigger('play')
+    }
+}
+
+function buildPage () {
+    // 生成分页
+    if (pageSize > 1) {
+        $('.pageUpDown').show()
+    } else {
+        $('.pageUpDown').hide()
+    }
+
+    // 生成对应的内容框
+    $('.content').html('')
+    var html = ''
+    for (var i = 0; i < pageSize; i++) {
+        html += '<div class="page"></div>'
+    }
+    $('.content').html(html)
+}
+
+var render = {
+    renderGameSelect: function (content) {
+        var html = '<div class="gameSelect" data-img="gameSelect-beijing.png">'
+        html += '<div class="gameContent">'
+        content.map(function (item) {
+            html += '<a href="game.html?path=' + encodeURIComponent(item.game) + '&text=' + item.text + '&time=' + item.time + '&tip=' + item.tip + '&rule=' + item.rule + '" class="eachGame" data-img="gameBtn-beijing.png" remw="3" remh="1.46">'
+            html += '<img src="' + item.img + '" >'
+            html += '</a>'
+        })
+        html += '</div></div>'
+        return html
+    }
+}
+$('.content').on('click', '.eachGame', function () {
+    $('.gameBtn').hide()
+    $('iframe').attr('src', $(this).attr('data-game'))
+    $('iframe').show()
+    $('.pageUpDown').show()
+})
+$('.return').on('click', function () {
+    window.history.back()
+    return false
+})
+
+</script>
+</body>
+</html>

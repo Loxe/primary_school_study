@@ -1,0 +1,133 @@
+@charset "UTF-8";
+#level3 { width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: 100% 100%; }
+#level3 .nature { background-repeat: no-repeat; position: absolute; }
+#level3 .nature.panda { background-size: 100% 100%; left: 9%; bottom: 6%; z-index: 1000; pointer-events: none; }
+#level3 .nature.leaf { width: 100%; height: 100%; background-size: 100% 100%; right: 0%; bottom: 0%; }
+#level3 .nature.bamboo { width: 100%; height: 100%; background-size: 100% 100%; right: 0%; bottom: 0%; }
+#level3 .nature.return { position: absolute; background-size: contain; right: 13%; bottom: 1%; z-index: 2; cursor: pointer; transition: all .4s ease-in-out; }
+#level3 .nature.return:hover { animation: scaleB 2s linear infinite; }
+#level3 .contain { position: absolute; width: 100vw; height: 100vh; z-index: 1; top: 0; left: 0; }
+#level3 .contain .window { width: 100%; height: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; }
+#level3 .contain .window .bambooL { position: absolute; background-size: 100% 100%; z-index: 10000; left: 0; top: 1%; }
+#level3 .contain .window .bambooR { position: absolute; background-size: 100% 100%; z-index: 10000; right: 0; top: 1%; }
+#level3 .contain .window .screen { position: relative; background-size: 100% 100%; z-index: 2; }
+#level3 .contain .window .screen .content { width: 100%; height: 100%; z-index: 1000; }
+#level3 .contain .window .screen .content .nextPage { width: 100%; background-size: 100% 100%; background-repeat: no-repeat; }
+#level3 .contain .window .screen .content .return { width: 100%; background-size: 100% 100%; background-repeat: no-repeat; }
+#level3 .contain .window .screen .content .page { width: 96%; height: 94.5%; position: absolute; left: 2%; bottom: 3.5%; display: none; }
+#level3 .contain .window .screen .content .page.show { display: block; overflow: hidden; }
+#level3 .contain .window .screen .content .full, #level3 .contain .window .screen .content .stopFull { width: 100%; height: 100%; }
+#level3 .contain .window .screen .content .full .video, #level3 .contain .window .screen .content .stopFull .video { width: 100%; height: 100%; background-size: 100% 100%; background-repeat: no-repeat; }
+#level3 .contain .window .screen .content .zhishiFull { width: 100% !important; height: 100%; }
+#level3 .contain .window .screen .content .zhishiFull video { width: 100%; height: 100%; position: absolute; }
+#level3 .contain .window .screen .content .zhishiFull img { width: 100%; height: 100%; }
+#level3 .contain .window .screen .content .controlRow { width: 100% !important; height: 100% !important; display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
+#level3 .contain .window .screen .content .controlRow ul { width: 100%; height: 90%; }
+#level3 .contain .window .screen .content .controlRow ul li { width: 90%; height: 30%; margin: 3% 3% 1% 5%; display: flex; justify-content: space-between; align-items: center; }
+#level3 .contain .window .screen .content .controlRow ul li .gif { width: 100%; height: 100%; display: none; }
+#level3 .contain .window .screen .content .controlRow ul li img { width: 100%; }
+#level3 .contain .window .screen .content .controlRow ul li .hz { width: 7%;  margin-bottom: 6%; cursor: pointer; }
+#level3 .contain .window .screen .content .controlRow ul li .pandaStart { width: 7%;  margin-bottom: 6%; cursor: pointer; }
+#level3 .contain .window .screen .content .guess { width: 100% !important; height: 100%; background-size: 100% 100%; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .content .guess ul { height: 100%; width: 90%; display: flex; justify-content: space-around; align-items: center; flex-direction: column; height: 90%; }
+#level3 .contain .window .screen .content .guess ul li { height: 30%; width: 90%; display: flex; justify-content: space-between; align-items: center; position: relative; opacity: 0; }
+#level3 .contain .window .screen .content .guess ul li img:first-child { height: 54%; cursor: pointer; }
+#level3 .contain .window .screen .content .guess ul li img:nth-child(2) { width: 25%; opacity: 0; min-width: 25%; cursor: pointer; }
+#level3 .contain .window .screen .content .guess ul li img:last-child { width: 24%; top: 50%; min-width: 24%; transform: translateY(-50%); right: -6%; position: absolute; opacity: 0; cursor: pointer; }
+#level3 .contain .window .screen .content .halfRow { width: 100% !important; height: 100%; background-size: 100% 100%; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .content .halfRow ul { width: 65%; height: 44%; position: absolute; left: 24%; bottom: 24%; display: flex; justify-content: flex-start; flex-wrap: wrap; }
+#level3 .contain .window .screen .content .halfRow ul .halfRowLi { width: 50%; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .content .halfRow ul .halfRowLi img { width: 20%; height: 100%; cursor: pointer; opacity: 0; cursor: pointer; }
+#level3 .contain .window .screen .content .followThree { width: 100%; height: 100%; background-size: 100% 100%; background-repeat: no-repeat; }
+#level3 .contain .window .screen .content .followThree .followItem { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+#level3 .contain .window .screen .content .followThree .followItem:first-child { z-index: 4; }
+#level3 .contain .window .screen .content .followThree .followItem:nth-child(2) { z-index: 3; }
+#level3 .contain .window .screen .content .followThree .followItem:nth-child(3) { z-index: 2; }
+#level3 .contain .window .screen .content .followThree .followItem img { width: 100%; height: 100%; }
+#level3 .contain .window .screen .content .followThree .followItem .audioBtnBox { width: 100%; height: 100%; }
+#level3 .contain .window .screen .content .followThree .followItem .audioBtnBox .dui-audio { background-size: 100% 100%; position: absolute; cursor: pointer; }
+#level3 .contain .window .screen .content .followThree .buttonList { width: 100%; position: absolute; z-index: 10; bottom: 0; display: flex; justify-content: center; }
+#level3 .contain .window .screen .content .followThree .buttonList span { cursor: pointer; background-size: 100% 100%; }
+#level3 .contain .window .screen .content .followTwo { width: 100%; height: 100%; background-size: 100% 100%; background-repeat: no-repeat; }
+#level3 .contain .window .screen .content .followTwo .followItem { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+#level3 .contain .window .screen .content .followTwo .followItem:first-child { z-index: 4; }
+#level3 .contain .window .screen .content .followTwo .followItem:nth-child(2) { z-index: 3; }
+#level3 .contain .window .screen .content .followTwo .followItem:nth-child(3) { z-index: 2; }
+#level3 .contain .window .screen .content .followTwo .followItem img { width: 100%; height: 100%; }
+#level3 .contain .window .screen .content .followTwo .followItem .audioBtnBox { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+#level3 .contain .window .screen .content .followTwo .followItem .audioBtnBox .dui-audio { background-size: 100% 100%; position: absolute; cursor: pointer; }
+#level3 .contain .window .screen .content .followTwo .buttonList { width: 15%; height: 20%; z-index: 10; position: absolute; right: 5%; bottom: 10%; display: flex; justify-content: center; }
+#level3 .contain .window .screen .content .followTwo .buttonList span { cursor: pointer; background-size: 100% 100%; }
+#level3 .contain .window .screen .content .followTwo .buttonList span:first-child { position: absolute; right: 0; bottom: 47%; }
+#level3 .contain .window .screen .content .followTwo .buttonList span:last-child { position: absolute; right: 0; bottom: 0; }
+#level3 .contain .window .screen .content .animateImage { display: none; background-size: 100% 100%; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .content .animateImage .box { margin-top: 26%; position: relative; cursor: pointer; }
+#level3 .contain .window .screen .content .animateImage .box .animate { position: absolute; transition: all ease 200ms; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .content .animateImage .box .animate img { transition: all linear 400ms; }
+#level3 .contain .window .screen .content .animateImage .box .animate:first-child { left: 0; top: 0; }
+#level3 .contain .window .screen .content .animateImage .box .animate:nth-child(2) { left: 35%; top: 0; }
+#level3 .contain .window .screen .content .animateImage .box .animate:nth-child(3) { left: 70%; top: 0; }
+#level3 .contain .window .screen .content .animateImage .box .animate:nth-child(4) { left: 0; top: 50%; }
+#level3 .contain .window .screen .content .animateImage .box .animate:nth-child(5) { left: 35%; top: 50%; }
+#level3 .contain .window .screen .content .animateImage .box .animate:nth-child(6) { left: 70%; top: 50%; }
+#level3 .contain .window .screen .content .animateImage .box .animate.center { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100% !important; height: 100% !important; background-color: #ffffff; padding-bottom: 0%; z-index: 10; }
+#level3 .contain .window .screen .content .animateImage .box .animate.center img { transform: scale(2.3); }
+#level3 .contain .window .screen .content .imgAndAudio { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .content .imgAndAudio img { width: 100%; height: 100%; }
+#level3 .contain .window .screen .content .imgAndAudio .dui-au { display: none; }
+#level3 .contain .window .screen .content .imgAndAudio .audioBtnBox { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+#level3 .contain .window .screen .content .imgAndAudio .audioBtnBox .dui-audio { background-size: 100% 100%; position: absolute; display: none; cursor: pointer; }
+#level3 .contain .window .screen .content .videoAndAudio { width: 100%; height: 100%; background-size: 100% 100%; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .content .videoAndAudio .video { width: 100% !important; height: 100% !important; }
+#level3 .contain .window .screen .content .videoAndAudio .dui-au { display: none; }
+#level3 .contain .window .screen .content .videoAndAudio .dui-audio { background-size: 100% 100%; position: absolute; display: none; cursor: pointer; }
+#level3 .contain .window .screen .content .videoAndAudioGif { width: 100%; height: 100%; background-size: 100% 100%; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .content .videoAndAudioGif .dui-au { display: none; }
+#level3 .contain .window .screen .content .videoAndAudioGif .dui-audio { position: absolute; cursor: pointer; opacity: 0; display: none; }
+#level3 .contain .window .screen .textBg { position: absolute; top: 48.5%; left: 50%; transform: translate(-50%, -50%); background-size: 100% 100%; z-index: 3; }
+#level3 .contain .window .screen .textBg .pinyin { background-size: 100% 100%; position: absolute; left: 39%; top: 1%; display: none; }
+#level3 .contain .window .screen .textBg .shizi { height: 73%; position: relative; margin: 0 auto; }
+#level3 .contain .window .screen .textBg .shizi .detail { position: absolute; top: 20%; z-index: 4; }
+#level3 .contain .window .screen .textBg .shizi .detail.bushou { left: 0; display: none; text-align: center; padding-top: 7%; }
+#level3 .contain .window .screen .textBg .shizi .detail.bushou .bushouTit { background-size: 100% 100%; display: inline-block; position: absolute; left: 50%; top: 3%; transform: translate(-50%, -50%); cursor: pointer; }
+#level3 .contain .window .screen .textBg .shizi .detail.ciyu { right: 0; display: none; text-align: center; padding-top: 7%; }
+#level3 .contain .window .screen .textBg .shizi .detail.ciyu .ciyuTit { background-size: 100% 100%; display: inline-block; position: absolute; left: 50%; top: 3%; transform: translate(-50%, -50%); cursor: pointer; }
+#level3 .contain .window .screen .textBg .shizi .detail.ciyu img { cursor: pointer; }
+#level3 .contain .window .screen .textBg .shizi .dazi { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0); display: none; z-index: 5; }
+#level3 .contain .window .screen .textBg .shizi .dazi.changeGif { cursor: pointer; }
+#level3 .contain .window .screen .textBg .shizi .dazi.video { width: 100%; height: 100%; cursor: pointer; }
+#level3 .contain .window .screen .textBg .wordLine { position: absolute; left: 50%; bottom: 0%; transform: translate(-50%); text-align: center; vertical-align: center; font-family: '楷体', fontSelf; }
+#level3 .contain .window .screen .textBg .wordLine .wordContent { width: 100%; position: absolute; left: 50%; top: 44%; transform: translate(-50%, -50%); }
+#level3 .contain .window .screen .textBg .wordLine .wordContent p { width: 100%; text-align: center; margin: 0 auto; }
+#level3 .contain .window .screen .textBg .wordLine .wordContent p.shortLine { width: 65%; text-align: left; }
+#level3 .contain .window .screen .textBg .wordLine .wordContent .word { background-image: url("../images/zicipandian/tianzige.png"); background-position: left center; background-size: 103% 100%; background-repeat: no-repeat; text-align: center; cursor: pointer; font-weight: lighter; vertical-align: middle; padding: 0.2%; display: inline-block; font-style: normal; position: relative; }
+#level3 .contain .window .screen .textBg .wordLine .wordContent .word i { position: absolute; font-style: normal; top: 50%; left: 50%; transform: translate(-50%, -50%); vertical-align: middle; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .textBg .wordLine .wordContent .word.borderNormal { background-size: 100% 100%; padding: 0.2% 0.4%; }
+#level3 .contain .window .screen .shipin { z-index: 3; position: absolute; top: 2%; left: 2%; background-color: #EFF7F6; }
+#level3 .contain .window .screen .pageUpDown { display: none; background-size: 100% 100%; background-repeat: no-repeat; position: absolute; right: 5%; bottom: 3%; z-index: 99999; width: 15%; cursor: pointer; }
+#level3 .contain .window .screen .pageUpDown.zicipageUpDown { right: 2%; bottom: 6%; }
+#level3 .contain .window .screen .pageUpDown li { background-size: 100% 100%; }
+#level3 .contain .window .screen .pageStep { position: absolute; left: 0; bottom: -4%; width: 100%; height: 10%; z-index: 1000; display: flex; justify-content: center; align-items: center; }
+#level3 .contain .window .screen .pageStep li { cursor: pointer; background-size: 100% 100%; background-repeat: no-repeat; transition: all .4s ease-in-out; }
+#level3 .contain .window .screen .pageStep li:first-child { background-image: url("../images/kantingduxie/page1.png"); }
+#level3 .contain .window .screen .pageStep li:nth-child(2) { background-image: url("../images/kantingduxie/page2.png"); }
+#level3 .contain .window .screen .pageStep li:nth-child(3) { background-image: url("../images/kantingduxie/page3.png"); }
+#level3 .contain .window .screen .pageStep li:nth-child(4) { background-image: url("../images/kantingduxie/page4.png"); }
+#level3 .contain .window .screen .pageStep li.up { position: relative; bottom: 10%; }
+#level3 .contain .window .screen .pageStep li:hover { animation: scaleB 2s linear infinite; }
+#level3 .contain .pinyinSelect { width: 18%; position: absolute; right: -19%; top: 2%; cursor: pointer; }
+#level3 .contain .pinyinSelect .menuBtn { display: block; background-size: 100% 100%; right: 0%; bottom: 0%; transition: all linear .4s; transition: all .4s ease-in-out; }
+#level3 .contain .pinyinSelect .menuBtn:hover { animation: scaleB 2s linear infinite; }
+#level3 .tianzigeIntr { position: fixed; width: 100%; height: 100%; z-index: 12; pointer-events: none; display: none; }
+#level3 .tianzigeIntr img { position: absolute; width: 60%; margin-left: 0.5%; margin-top: 7.9%; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+
+#level3 .contain .pinyinSelect .menuBtn.kan {display: none;}
+
+
+
+#level3 .contain .window .screen .textBg .shizi .detail.bushou .bushouTit.act {
+    background: transparent !important;
+   }
+  
+/*# sourceMappingURL=level3.css.map */

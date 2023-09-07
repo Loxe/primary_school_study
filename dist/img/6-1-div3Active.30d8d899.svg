@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="267.733" height="261.715" viewBox="0 0 267.733 261.715">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c6d7e6;
+        stroke: #fff;
+        stroke-width: 10px;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #5cb1eb;
+      }
+
+      .cls-3, .cls-5, .cls-6 {
+        fill: #964615;
+      }
+
+      .cls-3 {
+        font-size: 33.958px;
+      }
+
+      .cls-3, .cls-6 {
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+        font-weight: 700;
+      }
+
+      .cls-4, .cls-8 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke: #964615;
+        stroke-width: 1.1px;
+        stroke-dasharray: 1.1;
+      }
+
+      .cls-6 {
+        font-size: 37.991px;
+      }
+
+      .cls-7 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="组_2668" data-name="组 2668" transform="translate(1357.283 160.305)">
+    <g id="矩形_375" data-name="矩形 375" class="cls-1" transform="translate(-1347.283 -150.305)">
+      <rect class="cls-7" width="247.733" height="241.715"/>
+      <rect class="cls-8" x="-5" y="-5" width="257.733" height="251.715"/>
+    </g>
+    <g id="组_2667" data-name="组 2667">
+      <rect id="矩形_376" data-name="矩形 376" class="cls-2" width="176.762" height="11.629" rx="1.938" transform="translate(-1311.798 -30.029)"/>
+      <text id="_4" data-name="4" class="cls-3" transform="translate(-1272.957 -78.338)"><tspan x="0" y="0">4</tspan></text>
+      <text id="_3" data-name="3" class="cls-3" transform="translate(-1189.46 -36.242)"><tspan x="0" y="0">3</tspan></text>
+      <line id="直线_85" data-name="直线 85" class="cls-4" y2="42.485" transform="translate(-1208.551 -72.514)"/>
+      <rect id="矩形_377" data-name="矩形 377" class="cls-2" width="102.336" height="11.629" rx="1.938" transform="translate(-1311.798 -72.514)"/>
+      <g id="组_2666" data-name="组 2666">
+        <path id="路径_5992" data-name="路径 5992" class="cls-5" d="M-1311.8-11.979a2.152,2.152,0,0,1,2.362-1.847,2.152,2.152,0,0,1,2.362,1.847c0,5.173,0,9.641,42.752,9.641,17.348,0,29.535,2.9,36.221,8.62a16.829,16.829,0,0,1,2.663,2.839,15.9,15.9,0,0,1,2.059-2.207c6.867-6.139,20.43-9.252,40.313-9.252,32.905,0,40.711-4.731,42.541-6.766,1.079-1.2.718-2.086.674-2.181-.529-.934.024-1.995,1.215-2.41a2.69,2.69,0,0,1,3.132.967c.152.265,1.405,2.677-.951,5.511-4.732,5.688-20.413,8.572-46.611,8.572-22.826,0-32.523,4.287-36.638,7.884-2.7,2.361-3.271,4.631-3.37,5.786a6.143,6.143,0,0,1,.011,1.177,2.2,2.2,0,0,1-2.3,1.68,2.26,2.26,0,0,1-2.393-1.6,5.685,5.685,0,0,1-.041-1.212c-.146-1.259-.839-3.821-3.9-6.39-3.98-3.342-12.871-7.326-32.626-7.326C-1305.2,1.355-1311.8-2.576-1311.8-11.979Z"/>
+      </g>
+      <text id="_" data-name="?" class="cls-6" transform="translate(-1234.481 47.359)"><tspan x="0" y="0">?</tspan></text>
+    </g>
+  </g>
+</svg>

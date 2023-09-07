@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="95.894" height="214.488" viewBox="0 0 95.894 214.488">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9c321f;
+      }
+
+      .cls-2 {
+        fill: #b95832;
+      }
+
+      .cls-3 {
+        fill: #ba915f;
+      }
+
+      .cls-4 {
+        fill: #ffddb5;
+      }
+
+      .cls-5 {
+        fill: #e3b781;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="组_4265" data-name="组 4265" transform="translate(-530.635 -88.819)">
+    <g id="组_4221" data-name="组 4221">
+      <g id="组_4220" data-name="组 4220">
+        <rect id="矩形_1497" data-name="矩形 1497" class="cls-1" width="95.894" height="87.282" rx="7.036" transform="translate(530.635 216.025)"/>
+        <rect id="矩形_1498" data-name="矩形 1498" class="cls-2" width="95.894" height="87.282" rx="7.036" transform="translate(530.635 214.817)"/>
+        <rect id="矩形_1499" data-name="矩形 1499" class="cls-3" width="88.244" height="78.975" rx="6.127" transform="translate(534.46 219.094)"/>
+        <rect id="矩形_1500" data-name="矩形 1500" class="cls-4" width="88.244" height="74.55" rx="5.953" transform="translate(534.46 219.094)"/>
+        <rect id="矩形_1501" data-name="矩形 1501" class="cls-5" width="88.244" height="71.149" rx="5.846" transform="translate(534.46 222.495)"/>
+      </g>
+    </g>
+    <g id="组_4246" data-name="组 4246">
+      <g id="组_4244" data-name="组 4244">
+        <rect id="矩形_1555" data-name="矩形 1555" class="cls-1" width="95.894" height="87.282" rx="7.036" transform="translate(530.635 90.026)"/>
+        <rect id="矩形_1556" data-name="矩形 1556" class="cls-2" width="95.894" height="87.282" rx="7.036" transform="translate(530.635 88.819)"/>
+        <rect id="矩形_1557" data-name="矩形 1557" class="cls-3" width="88.244" height="78.975" rx="6.127" transform="translate(534.46 93.096)"/>
+        <rect id="矩形_1558" data-name="矩形 1558" class="cls-4" width="88.244" height="74.55" rx="5.953" transform="translate(534.46 93.096)"/>
+        <rect id="矩形_1559" data-name="矩形 1559" class="cls-5" width="88.244" height="71.149" rx="5.846" transform="translate(534.46 96.496)"/>
+      </g>
+      <g id="组_4245" data-name="组 4245">
+        <circle id="椭圆_2188" data-name="椭圆 2188" class="cls-6" cx="6.573" cy="6.573" r="6.573" transform="translate(572.043 114.561)"/>
+        <rect id="矩形_1560" data-name="矩形 1560" class="cls-6" width="64.517" height="8.726" transform="translate(546.323 142.323)"/>
+      </g>
+    </g>
+    <rect id="矩形_1561" data-name="矩形 1561" class="cls-2" width="6.652" height="38.658" transform="translate(575.29 176.159)"/>
+  </g>
+</svg>

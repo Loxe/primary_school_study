@@ -1,0 +1,152 @@
+@import '../assets/css/index.css';
+
+#option-box {
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    left: 20vw;
+    top: 10vw;
+}
+
+#option-box div {
+    float: left;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+}
+
+
+/* 播放按钮 */
+#audio-btn {
+    width: 9vw;
+    position: absolute;
+    left: 10vw;
+    top: 32vw;
+    cursor: pointer;
+}
+
+.item {
+    width: 8vw;
+    height: 8vw;
+    z-index: 99;
+    margin-right: 2%;
+    float: left;
+    cursor: default;
+}
+
+.item img {
+    width: 100%;
+    pointer-events: none;
+}
+
+[class*=target] {
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 0;
+}
+
+[class*=target] .thing {
+    content: '';
+    position: absolute;
+    left: 8vw;
+    height: 8vw;
+}
+[class*=target] img {
+    height: 80%;
+    width:auto !important;
+}
+[class*=target] .thing img {
+    height: 100%;
+    width:auto !important;
+}
+
+.items {
+    position: absolute;
+    bottom: 2%;
+    right: 0;
+    width: 56%;
+    height: 8vw;
+    z-index: 1;
+}
+
+[class*=stone] {
+    height: 90%;
+    text-align: center;
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+[class*=stone] img {
+    width: 100%;
+    margin-top: 8%;
+}
+
+#xiaoji {
+    position: absolute;
+    width: 8vw;
+    left: 17%;
+    top: 10%;
+    z-index: 8;
+}
+
+#xiaoji.animate {
+    animation-name: go;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes go {
+    0% {
+        left: 10%;
+        top: 10%;
+    }
+    10% {
+        left: 50%;
+        top: 10%;
+    }
+    20% {
+        left: 60%;
+        top: 25%;
+        transform: rotateY(0deg);
+    }
+    21% {
+        transform: rotateY(180deg);
+    }
+    21% {
+        transform: rotateY(180deg);
+        top: 28%;
+    }
+    40% {
+        transform: rotateY(180deg);
+        left: 10%;
+        top: 28%;
+    }
+    55% {
+        left: 5%;
+        top: 40%;
+    }
+    56% {
+        transform: rotateY(180deg);
+    }
+    57% {
+        transform: rotateY(0deg);
+    }
+    60% {
+        top: 45%;
+    }
+    90% {
+        left: 88%;
+        top: 45%;
+    }
+    100% {
+        left: 88%;
+        top: 60%;
+    }
+}
+
+.information {
+    left: 70vw;
+}

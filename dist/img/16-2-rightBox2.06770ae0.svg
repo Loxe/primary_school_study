@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="396.601" height="155.44" viewBox="0 0 396.601 155.44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #feeed5;
+      }
+
+      .cls-2 {
+        fill: #815050;
+        font-size: 40px;
+        font-family: MicrosoftYaHei-Bold, Microsoft YaHei;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="组_6652" data-name="组 6652" transform="translate(-689.002 -260.814)">
+    <rect id="矩形_2156" data-name="矩形 2156" class="cls-1" width="396.601" height="155.44" rx="34.534" transform="translate(689.002 260.814)"/>
+    <text id="B" class="cls-2" transform="translate(717 355)"><tspan x="0" y="0">B</tspan></text>
+  </g>
+</svg>

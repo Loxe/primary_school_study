@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="65" viewBox="0 0 60 65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #68c494;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="_1" data-name="1" transform="translate(-31.078 0.353)">
+    <rect id="圆角矩形_4_拷贝" data-name="圆角矩形 4 拷贝" class="cls-1" width="60" height="60" rx="30" transform="translate(31.078 4.647)"/>
+    <rect id="圆角矩形_4" data-name="圆角矩形 4" class="cls-2" width="60" height="60" rx="30" transform="translate(31.079 -0.353)"/>
+    <path id="路径_16921" data-name="路径 16921" class="cls-1" d="M68.287,65.122l6.476-6.305a1.987,1.987,0,0,0,0-2.865,2.12,2.12,0,0,0-2.943,0l-6.477,6.3-6.475-6.3a2.12,2.12,0,0,0-2.943,0,1.987,1.987,0,0,0,0,2.865L62.4,65.122l-6.477,6.305a1.987,1.987,0,0,0,0,2.865,2.124,2.124,0,0,0,2.943,0l6.475-6.305,6.476,6.305a2.123,2.123,0,0,0,2.943,0,1.987,1.987,0,0,0,0-2.865Z" transform="translate(-4.236 -35.711)"/>
+  </g>
+</svg>

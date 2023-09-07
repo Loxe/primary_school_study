@@ -1,0 +1,1 @@
+*{margin:0;padding:0}#app,.appView,body,html{height:100%;width:100%}.appView{position:absolute;transition:transform .3s ease-out}.fade-enter-active,.fade-leave-avtive{transition:opacity 1.5s}.fade-enter,.fade-leave-to{opacity:0}

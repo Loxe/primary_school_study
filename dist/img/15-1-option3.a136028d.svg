@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="97.703" height="63.907" viewBox="0 0 97.703 63.907">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffe0b1;
+      }
+
+      .cls-2 {
+        fill: #fac182;
+      }
+    </style>
+  </defs>
+  <g id="组_5338" data-name="组 5338" transform="translate(-1890.428 -306.308)">
+    <ellipse id="椭圆_2814" data-name="椭圆 2814" class="cls-1" cx="48.852" cy="15.718" rx="48.852" ry="15.718" transform="translate(1890.428 306.308)"/>
+    <path id="路径_14985" data-name="路径 14985" class="cls-2" d="M1939.279,338.282c-27.281,0-48.851-7.28-48.851-16.255v32.62h0c1.642,8.686,22.643,15.568,48.851,15.568s47.209-6.882,48.852-15.568h0v-32.62C1988.131,331,1966.561,338.282,1939.279,338.282Z"/>
+  </g>
+</svg>

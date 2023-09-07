@@ -1,0 +1,31 @@
+<svg id="组_6659" data-name="组 6659" xmlns="http://www.w3.org/2000/svg" width="142.494" height="65.897" viewBox="0 0 142.494 65.897">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccd9ff;
+      }
+
+      .cls-2 {
+        fill: #8ca6fd;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 28.534px;
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+    </style>
+  </defs>
+  <path id="路径_6993" data-name="路径 6993" class="cls-1" d="M546.18,248.434h40.532a10.737,10.737,0,0,0,5.558-1.551l22.258-13.474a6.007,6.007,0,0,0,2.9-5.138V201.677a6.008,6.008,0,0,0-3.057-5.232l-22.207-12.525a10.735,10.735,0,0,0-5.273-1.384h-81.42a10.735,10.735,0,0,0-5.273,1.384L477.99,196.445a6.006,6.006,0,0,0-3.058,5.232v26.594a6.007,6.007,0,0,0,2.9,5.138l22.258,13.474a10.741,10.741,0,0,0,5.559,1.551Z" transform="translate(-474.932 -182.537)"/>
+  <path id="路径_6994" data-name="路径 6994" class="cls-2" d="M546.18,243.985h37.057a10.243,10.243,0,0,0,5.082-1.341l20.35-11.655a5.144,5.144,0,0,0,2.649-4.444v-23a5.155,5.155,0,0,0-2.8-4.524l-20.3-10.833a10.246,10.246,0,0,0-4.821-1.2h-74.44a10.246,10.246,0,0,0-4.821,1.2l-20.3,10.833a5.156,5.156,0,0,0-2.795,4.524v23a5.143,5.143,0,0,0,2.648,4.444l20.35,11.655a10.242,10.242,0,0,0,5.082,1.341Z" transform="translate(-474.972 -182.396)"/>
+  <g id="组_4903" data-name="组 4903" transform="translate(27.637 17.612)">
+    <text id="_5_3_1" data-name="5  3  1" class="cls-3" transform="translate(0 25)"><tspan x="0" y="0" xml:space="preserve">5  3  1</tspan></text>
+    <rect id="矩形_2323" data-name="矩形 2323" class="cls-4" width="15" height="2" transform="translate(19.646 15.253)"/>
+    <rect id="矩形_2324" data-name="矩形 2324" class="cls-4" width="15" height="2" transform="translate(56.646 15.253)"/>
+  </g>
+</svg>

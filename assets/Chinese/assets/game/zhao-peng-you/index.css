@@ -1,0 +1,74 @@
+@import '../assets/css/index.css';
+
+#topic {
+    /* width: 32vw; */
+    height: 9vw;
+    position: absolute;
+    top: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#topic img {
+    height: 75%;
+}
+
+#options {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 22vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#options > div {
+    width: 12vw;
+    height: 20vw;
+    background: url('./images/box.png') center no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+#options > div:first-child {
+    margin: 0;
+}
+
+#options img {
+    height: 6vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#score {
+    font-size: 3.6vw;
+    font-weight: 700;
+    text-shadow: 0 0 0.5vw #fff;
+    position: absolute;
+    top: 13vw;
+    left: 62vw;
+    color: red;
+    animation: score 1s linear forwards;
+    display: none;
+}
+
+@keyframes score {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate3d(0, -5vw, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, -10vw, 0);
+        opacity: 0;
+    }
+}

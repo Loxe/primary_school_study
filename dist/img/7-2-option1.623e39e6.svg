@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73.199" height="63.597" viewBox="0 0 73.199 63.597">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #85e6d2;
+      }
+
+      .cls-2 {
+        fill: #56d1b8;
+      }
+
+      .cls-3 {
+        fill: #b2ede1;
+      }
+    </style>
+  </defs>
+  <g id="组_4442" data-name="组 4442" transform="translate(-311.904 -325.169)">
+    <g id="组_4441" data-name="组 4441">
+      <path id="路径_10083" data-name="路径 10083" class="cls-1" d="M311.9,359.71h29.068v29.056H311.9Z"/>
+      <path id="路径_10084" data-name="路径 10084" class="cls-2" d="M340.972,359.71H370.04v29.056H340.972Z"/>
+      <path id="路径_10085" data-name="路径 10085" class="cls-1" d="M370.04,359.219v29.547l15.051-6.894V352.817Z"/>
+      <path id="路径_10086" data-name="路径 10086" class="cls-2" d="M311.9,330.612h29.068v29.055H311.9Z"/>
+      <path id="路径_10087" data-name="路径 10087" class="cls-1" d="M327.7,325.169h29.068l-15.793,5.443H311.9Z"/>
+      <path id="路径_10088" data-name="路径 10088" class="cls-1" d="M340.972,330.612H370.04v29.055H340.972Z"/>
+      <path id="路径_10089" data-name="路径 10089" class="cls-3" d="M356.765,325.169H385.1l-15.063,5.443H340.972Z"/>
+      <path id="路径_10090" data-name="路径 10090" class="cls-3" d="M370.04,330.12v29.547l15.051-6.894v-27.6Z"/>
+    </g>
+  </g>
+</svg>

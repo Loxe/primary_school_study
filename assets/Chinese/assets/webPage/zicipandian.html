@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>语文（国家统编教材）一年级上</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/level3.css">
+</head>
+<body>
+<div id="level3" data-file="common" data-img="background.jpg">
+    <div class="contain">
+        <div class="window" remw="10.4" remh="7.85">
+            <span class="bambooL" data-file="common" data-img="bambooL.png" remw="0.34" remh="7.61"></span>
+            <span class="bambooR" data-file="common" data-img="bambooR.png" remw="0.34" remh="7.61"></span>
+            <div class="screen" data-file="common" data-img="screen.png" remw="10.4" remh="7.85">
+                <div class="textBg" data-img="text-bg.png" remw="9.2" remh="7">
+                    <img class="pinyin" remw="2" src="">
+                    <div class="shizi">
+                       <div class="bushou detail" remw="2.4" remh="4.2">
+                           <span class="bushouTit" click-audio-path="../audio/语文一音频/部首.mp3" data-img="bushou.png"
+                                 remw="1.6" remh="0.85"></span>
+                           <img class="pianpang" style="cursor: pointer;" click-audio-path=""  remw="3.44" src="">
+                       </div>
+                        <div class="ciyu detail" remw="2.4" remh="4.2">
+                            <span class="ciyuTit" click-audio-path="../audio/语文一音频/词语.mp3" data-img="ciyu.png"
+                                  remw="1.6" remh="0.85"></span>
+                            <img class="ciyu1" click-audio-path="" remw="5.2" src="">
+                            <img class="ciyu2" click-audio-path="" remw="5.2" src="">
+                        </div>
+                        <img class="dazi" click-audio="" remh="4">
+                    </div>
+                    <div class="wordLine" remw="9" remh="1.7">
+                        <div class="wordContent">
+                            <div class="page"></div>
+                            <div class="page"></div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="pageUpDown zicipageUpDown">
+                    <li class="nextPage" data-file="common" data-img="nextPage.png" remw="1.1" remh="0.7"></li>
+                    <li style="display: none" class="firstPage" data-file="common" data-img="prePage.png" remw="1.1"
+                        remh="0.7"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tianzigeIntr">
+        <img src="" data-gif="../video/3.字词盘点/1.识字/2.识字一 二、金木水火土（字词盘点）/2.我会写/田字格.gif">
+        <audio class="tianzigeAudio" src=""
+               data-audio="../video/3.字词盘点/1.识字/2.识字一 二、金木水火土（字词盘点）/2.我会写/田字格介绍（音频）.mp3"></audio>
+    </div>
+    <span class="panda nature" data-file="common" data-img="panda.gif" remw="3.18" remh="2.55"></span>
+    <img id="leaf" class="leaf nature" src="../images/common/leaf/0.png"/>
+    <span class="bamboo nature" data-file="common" data-img="bamboo.png"></span>
+    <span audio-path="../audio/语文一音频/返回.mp3" data-file="common" class="return nature" data-img="back_text.png"
+          remw="1.89"
+          remh="1.63"></span>
+    <audio class="pangBaiAudio" muted src=""></audio>
+</div>
+<script src="../js/Browser.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/imgLoad.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/loopImg.js"></script>
+<script src="../js/config.js"></script>
+<script src="../js/zici-config.js"></script>
+<script src="../js/playAudio.js"></script>
+<script>
+
+$(window).on('load', function () {
+    saveChildPath()
+    setZici()
+    loopImg('leaf','../images/common/leaf','png',0,41,8000)
+    //所有按钮的音频绑定
+    playAudio()
+})
+
+var ZICIname = getUrlParam('name')
+var pageNumber = 1
+var pageSize = 1
+var currentWord = ''
+
+function setZici () {
+    zici.map(function (item) {
+        if (item.name == ZICIname) {
+            pageSize = item.text.length
+            if (pageSize == 1) {
+                $('.pageUpDown').hide()
+            } else {
+                $('.pageUpDown').show()
+            }
+            item.text.map(function (li, index) {
+                var html = ''
+                if (li.type == 'has') {
+                    html = buildContentHas(li.content, li.audio)
+                }
+                if (li.type == 'no') {
+                    html = buildContentNone(li.content, li.audio)
+                }
+                $('.wordContent .page:nth-child(' + (index + 1) + ')').html(html)
+                $('.wordContent .page:nth-child(' + (index + 1) + ') ').attr('data-pangbai-audio', li.audio)
+            })
+            showPage(pageNumber)
+        }
+    })
+    remToPx()
+    bindClickPlayAudio()
+}
+
+function buildContentHas (liContent) {
+    var html = ''
+    var wordArr = []
+    for (var key in liContent) {
+        wordArr.push(key)
+    }
+    wordArr.map(function (key, index) {
+        var wordInfo = liContent[key]
+        var className = wordInfo.color
+        var py = wordInfo.py
+        var cy=wordInfo.cy
+        var cy1=wordInfo.cy1
+        var audioImg = wordInfo.center.audioImg
+        var kongbai = wordInfo.center.kongbai
+        var audioGif = wordInfo.center.audioGif
+        var img = wordInfo.center.img
+        var gif = wordInfo.center.gif // 点图片显示的gif
+        var video = wordInfo.center.type
+        var pp = wordInfo.pp
+        var ciyu1 = wordInfo.zj && wordInfo.zj.ciyu1
+        var ciyu2 = wordInfo.zj && wordInfo.zj.ciyu2
+
+        var pianpang = wordInfo && wordInfo.pianpang  //偏旁
+        var audio3 = wordInfo.zj && wordInfo.zj.audio3    //偏旁音频
+
+        var audio1 = wordInfo.zj && wordInfo.zj.audio1
+        var audio2 = wordInfo.zj && wordInfo.zj.audio2
+        var borderClass = ''
+        var lineLength = 8
+        if (wordArr.length > 12) {
+            lineLength = 8
+        } else {
+            lineLength = 12
+        }
+        if (index == (lineLength - 1) || index == (wordArr.length - 1)) {
+            borderClass = 'borderNormal'
+        }
+        //拼 开始p 0个 的前面 8个的前面----被line整除的前面
+        if ((index % lineLength) == 0) {
+            if (lineLength == 8) {
+                html += '<p class="shortLine">'
+            } else {
+                html += '<p>'
+            }
+        }
+        html += '<span class="word '    + borderClass + '"remF="0.6" remw="0.7" remh="0.7" style="color:' + className + '" '
+        if (video) {
+            html += 'img="' + (img || '') + '"  data-video="video" '
+            html += 'click-audio-path="' + (audioImg || '') + '"'
+        } else {
+            html += 'img="' + (img || '') + '" '
+            html += 'click-audio-path="' + (audioImg || '') + '"'
+        }
+        html += 'audioGif="' + (audioGif || '') + '" '
+        html += 'gif="' + (gif || '') + '" '
+        html += 'pp="' + (pp || '') + '" '
+        html += 'kongbai="' + (kongbai || '') + '" '
+        html += 'ciyu1="' + (ciyu1 || '') + '" '
+        html += 'ciyu2="' + (ciyu2 || '') + '" '
+        html += 'pianpang="' + (pianpang || '') + '" '
+        html += 'audio1="' + (audio1 || '') + '" '
+        html += 'audio2="' + (audio2 || '') + '" '
+        html += 'audio3="' + (audio3 || '') + '" '
+        html += 'cy="' + (cy || '') + '" '
+        html += 'cy1="' + (cy1 || '') + '" '
+        html += 'py="' + (py || '') + '"><i remw="0.68" remh="0.68" >'
+        html += key + '</i></span>'
+        //拼 结束p 7个 的后面或者最后一个的后面----被减一整除或者最后一个
+        if (index == (wordArr.length - 1) || (index % (lineLength - 1)) == (lineLength - 1)) {
+            html += '</p>'
+        }
+    })
+    return html
+}
+
+function buildContentNone (liContent) {
+    var html = ''
+    var wordArr = []
+    for (var key in liContent) {
+        wordArr.push(key)
+    }
+    wordArr.map(function (key, index) {
+        var wordInfo = liContent[key]
+        var className = wordInfo.color
+        var img = wordInfo.center.img
+        var py = wordInfo.py
+        var cy=wordInfo.cy
+        var cy1=wordInfo.cy1
+        var audioImg = wordInfo.center.audioImg
+        var audioGif = wordInfo.center.audioGif
+        var kongbai = wordInfo.center.kongbai
+        var gif = wordInfo.center.gif // 点图片显示的gif
+        var video = wordInfo.center.type
+        var borderClass = ''
+        var lineLength = 8
+        if (wordArr.length > 12) {
+            lineLength = 8
+        } else {
+            lineLength = 12
+        }
+        if (index == (lineLength - 1) || index == (wordArr.length - 1)) {
+            borderClass = 'borderNormal'
+        }
+        //拼 开始p 0个 的前面 8个的前面----被line整除的前面
+        if ((index % lineLength) == 0) {
+            if (lineLength == 8) {
+                html += '<p class="shortLine">'
+            } else {
+                html += '<p>'
+            }
+        }
+        html += '<span class="word ' + borderClass + '" remF="0.6" remw="0.7" remh="0.7" style="color:' + className + '" '
+        html += 'img="' + (img || '') + '" '
+        html += 'click-audio-path="' + (audioImg || '') + '" '
+        if (video) {
+            html += 'img="' + (img || '') + '"  data-video="video" '
+            html += 'click-audio-path="' + (audioImg || '') + '"'
+        } else {
+            html += 'img="' + (img || '') + '" '
+            html += 'click-audio-path="' + (audioImg || '') + '"'
+        }
+        html += 'audioGif="' + (audioGif || '') + '" '
+        html += 'gif="' + (gif || '') + '" '
+        html += 'kongbai="' + (kongbai || '') + '" '
+        html += 'cy="' + (cy || '') + '" '
+        html += 'cy1="' + (cy1 || '') + '" '
+        html += 'py="' + (py || '') + '"><i remw="0.68" remh="0.68" >'
+        html += key + '</i></span>'
+        //拼 结束p 7个 的后面或者最后一个的后面----被减一整除或者最后一个
+        if (index == (wordArr.length - 1) || (index % (lineLength - 1)) == (lineLength - 1)) {
+            html += '</p>'
+        }
+    })
+    return html
+}
+
+function showPage (png) {
+    pageNumber = png
+    remToPx()
+    var page = $('.wordContent .page:nth-child(' + pageNumber + ')')
+    page.show().siblings().hide()
+    // 显示当前页
+    page.addClass('show').siblings().removeClass('show')
+    // 页面初始化停止音频。停止gif,停止视频
+    if ($('.gif')) {
+        $('.gif').attr('src', '')
+    }
+    $('video').trigger('pause')
+    $('audio').trigger('pause')
+    // 旁白
+    initPageOptionBeforePangBai()
+    var hasPangBai = page.attr('data-pangbai-audio')
+    if (hasPangBai) {
+        $('.pangBaiAudio').attr('src', hasPangBai)
+        $('.pangBaiAudio').off('timeupdate')
+        $('.pangBaiAudio').on('timeupdate', function () {
+            if ($(this)[0].currentTime > 0) {
+                $(this)[0].muted = false
+            }
+        })
+        $('.pangBaiAudio').trigger('play')
+    } else {
+        initPageOption()
+    }
+}
+
+$('.wordLine').on('click', 'span', function () {
+    wordClick($(this))
+    $('#clickAudio').attr('src', $(this).attr('click-audio-path'))
+    $('#clickAudio').trigger('play')
+})
+
+function clearInfo () {
+    $('.bushou img').hide()
+    $('.ciyu img').hide()
+    $('.bushou').hide()
+    $('.ciyu').hide()
+    $('.dazi').hide()
+    $('.dazi').attr('src', '')
+    $('.pinyin').hide()
+    $('.tianzigeAudio').trigger('pause')
+    //中断旁白
+    $('.pangBaiAudio').trigger('pause')
+    $('.tianzigeIntr').hide()
+    $('.tianzigeIntr img').attr('src', '')
+    $('audio').attr('src', '')
+    $('video').attr('src', '')
+    $('.dazi').hide()
+}
+
+function initPageOptionBeforePangBai () {
+    if (ZICIname == '2.金木水火土' && pageNumber == 1) {
+        $('.tianzigeIntr').hide()
+        $('.tianzigeIntr img').attr('src', '')
+    }
+}
+
+function initPageOption () {
+    if (ZICIname == '2.金木水火土' && pageNumber == 2) {
+        var gif = $('.tianzigeIntr img').attr('data-gif')
+        $('.tianzigeIntr img').attr('src', gif)
+        $('.tianzigeIntr').show()
+        var audio = $('.tianzigeAudio').attr('data-audio')
+        $('.tianzigeAudio').attr('src', audio)
+        $('.tianzigeAudio').trigger('play')
+    }
+}
+
+function wordClick (word) {
+    clearInfo()
+    currentWord = word
+    var img = word.attr('img')
+    var py = word.attr('py')
+    var pp = word.attr('pp')
+    var cy=word.attr('cy')
+    var cy1=word.attr('cy1')
+    var ciyu1 = word.attr('ciyu1')
+    var ciyu2 = word.attr('ciyu2')
+    var pianpang = word.attr('pianpang')
+    var gif = word.attr('gif')
+    var video = word.attr('data-video')
+    var kongbai=word.attr('kongbai');
+
+    if(kongbai==""){
+        $('#level3 .contain .window .screen .textBg .shizi .detail.bushou .bushouTit').stop(true,false).removeClass('act');
+    }else{
+
+        $('#level3 .contain .window .screen .textBg .shizi .detail.bushou .bushouTit').stop(true,false).addClass('act');
+      
+    }
+
+    if (gif) {
+        $('.dazi').attr('data-gif', gif)
+        $('.dazi').addClass('changeGif')
+    } else {
+        $('.dazi').attr('data-gif', '')
+        $('.dazi').removeClass('changeGif')
+    }
+
+    if (video) {
+        $('.dazi').attr('remw', '8')
+    } else {
+        $('.dazi').attr('remw', '4')
+    }
+    if (pp) {
+        console.log(pp)
+        $('.bushou').show()
+        $('.bushou img').hide()
+       
+        $('.bushou img').attr('src', pp)
+       
+
+    } else {
+        $('.bushou').hide()
+        $('.ciyu').hide()
+    }
+
+    $('.pinyin').show()
+    if(cy=='kong'){
+        $('.pinyin').attr('src', cy1)
+    }else if(py){
+        $('.ciyu').show()
+        $('.ciyuTit img').hide()
+        $('.ciyu1').attr('ciyu', ciyu1)
+        $('.ciyu2').attr('ciyu', ciyu2)
+        $('.pinyin').attr('src', py)
+    }
+   
+    
+    
+    $('.dazi').show()
+    $('.dazi').attr('src', img)
+    setAudio(word)
+    remToPx()
+}
+
+function changeBackGif () {
+    var img = ''
+    console.log(currentWord)
+    console.log(gifCanChange)
+    if (currentWord) {
+        img = currentWord.attr('img')
+    }
+    gifCanChange = true
+    if (gifCanChange) {
+        $('audio:not(.bgAudio)').attr('src', '')
+        $('audio:not(.bgAudio)').trigger('pause')
+        $('.dazi').attr('src', img)
+    }
+}
+
+function setAudio (word) {
+    var audio1 = word.attr('audio1')
+    var audio2 = word.attr('audio2')
+    var audio3 = word.attr('audio3')
+    var gif = word.attr('gif')
+    var audioGif = word.attr('audioGif')
+
+    if (gif) {
+        $('.dazi').attr('click-audio', audioGif)
+    } else {
+        $('.dazi').attr('click-audio', '')
+    }
+
+    $('.ciyu1').attr('click-audio-path', audio1)
+    $('.ciyu2').attr('click-audio-path', audio2)
+    $('.pianpang').attr('click-audio-path', audio3)
+}
+
+$('.tianzigeAudio').on('ended', function () {
+    $('.tianzigeIntr').hide()
+})
+
+$('.pangBaiAudio').on('ended', function () {
+    initPageOption()
+})
+
+$('.bushouTit').on('click', function () {
+    var pp = currentWord.attr('pp')
+    $('.bushou img').show()
+    $('.bushou img').attr('src', pp)
+    changeBackGif()
+})
+
+$('.ciyuTit').on('click', function () {
+    var ciyu1 = currentWord.attr('ciyu1')
+    var ciyu2 = currentWord.attr('ciyu2')
+    $('.ciyu img').show()
+    $('.ciyu1').attr('src', ciyu1)
+    $('.ciyu2').attr('src', ciyu2)
+
+    changeBackGif()
+})
+
+$('.return').on('click', function () {
+    window.history.back()
+    return false
+})
+
+$('.pageUpDown').on('click', 'li:first-child', function () {
+    clearInfo()
+    $('video').trigger('pause')
+    $('audio').trigger('pause')
+    pageNumber++
+    if (pageNumber > 1) {
+        $(this).next().show()
+    }
+    if (pageNumber == pageSize) {
+        $(this).hide()
+    }
+    showPage(pageNumber)
+})
+
+$('.pageUpDown').on('click', 'li:last-child', function () {
+    clearInfo()
+    $('video').trigger('pause')
+    $('audio').trigger('pause')
+    pageNumber--
+    if (pageNumber == pageSize) {
+        $(this).prev().hide()
+    }
+    if (pageNumber == 1) {
+        $(this).prev().show()
+        $(this).hide()
+    }
+    showPage(pageNumber)
+})
+
+var gifCanChange = true
+$('.dazi').on('click', function () {
+    var gif = $(this).attr('data-gif')
+    $('#clickAudio').attr('src', $(this).attr('click-audio'))
+    $('#clickAudio').trigger('play')
+    setTimeout(function () {
+        gifCanChange = true
+        setTimeout(function () {
+            gifCanChange = false
+        }, $('#clickAudio')[0].duration * 1000)
+    }, 100)
+    if (gif) {
+        $(this).attr('src', gif)
+    }
+})
+
+//点击播放音频
+function bindClickPlayAudio () {
+    var audioList = $('[click-audio-path]')
+    if ($('#clickAudio').length <= 0) {
+        var audio = document.createElement('audio')  //生成一个audio元素
+        audio.controls = true  //这样控件才能显示出来
+        audio.id = 'clickAudio'  //音乐的路径
+        document.body.appendChild(audio)  //把它添加到页面中
+    }
+    for (var i = 0; i < audioList.length; i++) {
+        var item = $(audioList[i])
+        item.on('click', function () {
+            changeBackGif()
+            $('#clickAudio').attr('src', $(this).attr('click-audio-path'))
+            $('#clickAudio').trigger('play')
+        })
+    }
+}
+</script>
+</body>
+</html>

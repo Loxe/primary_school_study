@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="259.027" height="164.057" viewBox="0 0 259.027 164.057">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4f3d72;
+      }
+
+      .cls-2 {
+        fill: #2c1e55;
+      }
+
+      .cls-3 {
+        fill: #fff8ef;
+      }
+
+      .cls-4 {
+        fill: #dbcba7;
+      }
+
+      .cls-5 {
+        fill: #f0e3c3;
+      }
+    </style>
+  </defs>
+  <g id="组_4495" data-name="组 4495" transform="translate(-801.45 -259.12)">
+    <rect id="矩形_1917" data-name="矩形 1917" class="cls-1" width="259.027" height="24.521" transform="translate(801.45 398.655)"/>
+    <rect id="矩形_1918" data-name="矩形 1918" class="cls-2" width="259.027" height="12.26" transform="translate(801.45 410.916)"/>
+    <g id="组_4494" data-name="组 4494">
+      <rect id="矩形_1919" data-name="矩形 1919" class="cls-3" width="221.856" height="139.536" transform="translate(818.868 259.12)"/>
+      <rect id="矩形_1920" data-name="矩形 1920" class="cls-4" width="27.051" height="139.536" transform="translate(818.868 259.12)"/>
+      <rect id="矩形_1921" data-name="矩形 1921" class="cls-4" width="19.266" height="139.536" transform="translate(893.014 259.12)"/>
+      <rect id="矩形_1922" data-name="矩形 1922" class="cls-5" width="19.266" height="139.536" transform="translate(912.281 259.12)"/>
+    </g>
+  </g>
+</svg>

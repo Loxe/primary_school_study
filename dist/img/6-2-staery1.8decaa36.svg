@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110.413" height="128.414" viewBox="0 0 110.413 128.414">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e59d9e;
+      }
+
+      .cls-2 {
+        fill: #b2b2b2;
+      }
+
+      .cls-3 {
+        fill: #ffd3c7;
+      }
+
+      .cls-4 {
+        fill: #eab538;
+      }
+
+      .cls-5 {
+        fill: #4c2c25;
+      }
+    </style>
+  </defs>
+  <g id="组_3061" data-name="组 3061" transform="translate(-17.939 -1083.656)">
+    <path id="路径_7389" data-name="路径 7389" class="cls-1" d="M27.094,1116.039s-9.7-7.42-9.131-14.839c1.712-6.278,13.126-15.409,18.263-17.121s7.419,1.712,14.838,11.414C51.064,1095.493,35.655,1117.18,27.094,1116.039Z"/>
+    <image id="矩形_725" data-name="矩形 725" width="30" height="28" transform="translate(27 1095)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAYAAAB2+A+pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVEhLtZZREoMgDESht9H7X0U9ju3SrpMqCQni+2JGhufGRM37vqdRrOuqHjbPc/4tC0PElpDk/PVO01QW3WKPDEBIh5S/yiqIVwoghZBSEhZHktaEJFTqSFJNSNyJo0k1EBTPuJnYI5QiPlPrXIxWV3MRLZ0mxV7Osynetu04QQo0oQX2c4aBWmpIz9daslZ5f8tCNXGP1OIsBVWxlPaUVVKTgotYdnFEWCuzJgV/YjbT3ZTAkoJL4qgQSc9pW1JwdLUcHQ+10uKm5chYVJvLopaQeKXALbaEwFNeSSm1VWZLBqJCoiZuJQS9UpDPX5+WjNyRgiOxJyG5KwV5WRaf7cMIIXl5DxspBa5xGi0Fx5ur9ovzhJBcfgT4LX5SmlJKbx5huJSLgxjSAAAAAElFTkSuQmCC"/>
+    <path id="路径_7390" data-name="路径 7390" class="cls-2" d="M37.367,1128.594s-9.131-1.141-3.995-10.272,17.9-18.7,22.645-17.052c1.9-.07,5.891,2.213,4.75,7.349C59.054,1108.619,41.933,1110.9,37.367,1128.594Z"/>
+    <path id="路径_7391" data-name="路径 7391" class="cls-3" d="M99.575,1203.358l24.541,8.561,3.424-5.136L122.4,1185.1l-3.424-1.712-17.121,7.99-3.424,7.99Z"/>
+    <path id="路径_7392" data-name="路径 7392" class="cls-4" d="M37.367,1128.594s61.067,74.194,62.208,74.764c0,0,1.142-7.419,8.561-6.848,0,0-2.283-10.273,7.419-6.849,0,0,2.283-6.278,6.849-4.566,0-.57-61.637-76.476-61.637-76.476S43.074,1109.19,37.367,1128.594Z"/>
+    <path id="路径_7393" data-name="路径 7393" class="cls-5" d="M42.568,1118.316a25.249,25.249,0,0,1,8.154-6.736l64.833,78.081s-8.891-4.016-7.584,6.838Z"/>
+    <path id="路径_7394" data-name="路径 7394" class="cls-5" d="M118.409,1209.636s-1.626-8.262,7.747-8.7l1.955,6.414s1.712,5.707-3.995,4.566C118.98,1210.207,118.409,1209.636,118.409,1209.636Z"/>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="289.404" height="341.357" viewBox="0 0 289.404 341.357">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a6c6ff;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: #94663d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="组_2097" data-name="组 2097" transform="translate(-764.297 -61.508)">
+    <g id="组_1958" data-name="组 1958" transform="translate(0.585 -0.526)">
+      <rect id="矩形_712" data-name="矩形 712" class="cls-1" width="107.393" height="107.393" rx="10.701" transform="translate(855.374 62.034)"/>
+      <rect id="矩形_713" data-name="矩形 713" class="cls-2" width="94.57" height="94.57" rx="9.423" transform="translate(861.785 68.445)"/>
+    </g>
+    <g id="组_1961" data-name="组 1961" transform="translate(0.585 -0.526)">
+      <line id="直线_66" data-name="直线 66" class="cls-3" x2="73.303" y2="93.139" transform="translate(909.07 187.235)"/>
+      <line id="直线_67" data-name="直线 67" class="cls-3" x1="73.303" y2="93.139" transform="translate(835.767 187.235)"/>
+    </g>
+    <g id="组_1962" data-name="组 1962" transform="translate(0.585 -0.526)">
+      <rect id="矩形_714" data-name="矩形 714" class="cls-1" width="107.393" height="107.393" rx="10.701" transform="translate(945.723 295.998)"/>
+      <rect id="矩形_715" data-name="矩形 715" class="cls-2" width="94.57" height="94.57" rx="9.423" transform="translate(952.135 302.409)"/>
+    </g>
+    <g id="组_1963" data-name="组 1963" transform="translate(0.585 -0.526)">
+      <rect id="矩形_716" data-name="矩形 716" class="cls-1" width="107.393" height="107.393" rx="10.701" transform="translate(763.712 295.998)"/>
+      <rect id="矩形_717" data-name="矩形 717" class="cls-2" width="94.57" height="94.57" rx="9.423" transform="translate(770.124 302.409)"/>
+    </g>
+  </g>
+</svg>

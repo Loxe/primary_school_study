@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="274.734" height="139.894" viewBox="0 0 274.734 139.894">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9b65f;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="组_4654" data-name="组 4654" transform="translate(-896.045 -1609.541)">
+    <g id="椭圆_2410" data-name="椭圆 2410" class="cls-1" transform="translate(906.045 1677.675)">
+      <ellipse class="cls-2" cx="59.947" cy="30.88" rx="59.947" ry="30.88"/>
+      <ellipse class="cls-3" cx="59.947" cy="30.88" rx="64.947" ry="35.88"/>
+    </g>
+    <g id="椭圆_2411" data-name="椭圆 2411" class="cls-1" transform="translate(1040.885 1619.541)">
+      <circle class="cls-2" cx="59.947" cy="59.947" r="59.947"/>
+      <circle class="cls-3" cx="59.947" cy="59.947" r="64.947"/>
+    </g>
+  </g>
+</svg>

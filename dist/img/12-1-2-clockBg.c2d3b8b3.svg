@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="656.78" height="656.78" viewBox="0 0 656.78 656.78">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #aa6a32;
+      }
+
+      .cls-2 {
+        fill: #eeb896;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #ebb6a2;
+      }
+
+      .cls-5 {
+        fill: #5fb2d6;
+      }
+
+      .cls-6 {
+        fill: #854c2b;
+        font-size: 48.194px;
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="组_4006" data-name="组 4006" transform="translate(-325.098 -31.83)">
+    <path id="路径_11441" data-name="路径 11441" class="cls-1" d="M653.488,31.83c-181.364,0-328.39,147.027-328.39,328.39s147.026,328.39,328.39,328.39,328.39-147.026,328.39-328.39S834.856,31.83,653.488,31.83Zm0,584.864c-141.647,0-256.474-114.827-256.474-256.474S511.841,103.746,653.488,103.746,909.962,218.574,909.962,360.22,795.134,616.694,653.488,616.694Z"/>
+    <path id="路径_11442" data-name="路径 11442" class="cls-2" d="M653.488,45.714c-173.7,0-314.506,140.811-314.506,314.506s140.81,314.506,314.506,314.506S967.994,533.916,967.994,360.22,827.188,45.714,653.488,45.714Zm0,560.136c-135.658,0-245.63-109.972-245.63-245.63S517.83,114.59,653.488,114.59s245.63,109.973,245.63,245.63S789.145,605.85,653.488,605.85Z"/>
+    <path id="路径_11443" data-name="路径 11443" class="cls-3" d="M378.57,360.22c-.022,151.833,123.046,274.936,274.879,274.957S928.384,512.131,928.406,360.3v-.078C928.427,208.387,805.36,85.285,653.527,85.263S378.592,208.309,378.57,360.142Z"/>
+    <path id="路径_11444" data-name="路径 11444" class="cls-4" d="M643.856,53h19.268v63.967H643.856Zm0,550.484h19.268v63.967H643.856Z"/>
+    <path id="路径_11445" data-name="路径 11445" class="cls-4" d="M508.226,89.325l31.98,55.4-16.677,9.631L491.543,98.962ZM783.477,566.056l31.987,55.394-16.69,9.631-31.98-55.394Z"/>
+    <path id="路径_11446" data-name="路径 11446" class="cls-4" d="M392.237,198.255l55.393,31.98L438,246.925l-55.394-31.987ZM868.949,473.494l55.4,31.98-9.637,16.689-55.394-31.986Z"/>
+    <path id="路径_11447" data-name="路径 11447" class="cls-4" d="M346.268,350.588h63.967v19.268H346.268Zm550.478,0h63.967v19.268H896.746Z"/>
+    <path id="路径_11448" data-name="路径 11448" class="cls-4" d="M437.987,473.565l9.637,16.689-55.406,31.98-9.631-16.683Zm476.77-275.233,9.637,16.69L868.988,247l-9.631-16.683Z"/>
+    <path id="路径_11449" data-name="路径 11449" class="cls-4" d="M523.491,566.05l16.683,9.631-31.98,55.4-16.69-9.638ZM798.716,89.344,815.4,98.975l-31.981,55.4-16.689-9.637Z"/>
+    <path id="路径_11450" data-name="路径 11450" class="cls-5" d="M633.515,360.22a19.973,19.973,0,1,0,19.973-19.972A19.973,19.973,0,0,0,633.515,360.22Z"/>
+    <path id="路径_11451" data-name="路径 11451" class="cls-3" d="M645.2,360.22a8.288,8.288,0,0,0,16.576.006v-.006a8.288,8.288,0,1,0-16.576-.006Z"/>
+    <g id="组_4010" data-name="组 4010">
+      <text id="_12" data-name="12" class="cls-6" transform="translate(630.325 163.065)"><tspan x="0" y="0">12</tspan></text>
+      <text id="_6" data-name="6" class="cls-6" transform="translate(640.325 588.074)"><tspan x="0" y="0">6</tspan></text>
+      <text id="_9" data-name="9" class="cls-6" transform="translate(420.151 374.732)"><tspan x="0" y="0">9</tspan></text>
+      <text id="_10" data-name="10" class="cls-6" transform="translate(448.151 268.269)"><tspan x="0" y="0">10</tspan></text>
+      <text id="_8" data-name="8" class="cls-6" transform="translate(453.151 483.83)"><tspan x="0" y="0">8</tspan></text>
+      <text id="_2" data-name="2" class="cls-6" transform="translate(829.975 267.269)"><tspan x="0" y="0">2</tspan></text>
+      <text id="_1" data-name="1" class="cls-6" transform="translate(745.142 186.878)"><tspan x="0" y="0">1</tspan></text>
+      <text id="_11" data-name="11" class="cls-6" transform="translate(529.28 186.878)"><tspan x="0" y="0">11</tspan></text>
+      <text id="_5" data-name="5" class="cls-6" transform="translate(745.142 559.366)"><tspan x="0" y="0">5</tspan></text>
+      <text id="_7" data-name="7" class="cls-6" transform="translate(539.28 559.366)"><tspan x="0" y="0">7</tspan></text>
+      <text id="_4" data-name="4" class="cls-6" transform="translate(829.975 483.83)"><tspan x="0" y="0">4</tspan></text>
+      <text id="_3" data-name="3" class="cls-6" transform="translate(867.126 374.732)"><tspan x="0" y="0">3</tspan></text>
+    </g>
+  </g>
+</svg>

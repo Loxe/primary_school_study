@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="267.733" height="261.715" viewBox="0 0 267.733 261.715">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffc7c7;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #d34dff;
+      }
+
+      .cls-3 {
+        fill: #ff7f4d;
+      }
+
+      .cls-4, .cls-6 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke: #964615;
+        stroke-linejoin: round;
+        stroke-width: 2.2px;
+        stroke-dasharray: 2.2;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="组_2713" data-name="组 2713" transform="translate(1357.283 -1172.621)">
+    <g id="矩形_429" data-name="矩形 429" class="cls-1" transform="translate(-1347.283 1182.621)">
+      <rect class="cls-5" width="247.733" height="241.715"/>
+      <rect class="cls-6" x="-5" y="-5" width="257.733" height="251.715"/>
+    </g>
+    <g id="组_2712" data-name="组 2712">
+      <rect id="矩形_430" data-name="矩形 430" class="cls-2" width="32.637" height="32.637" rx="5.985" transform="translate(-1280.067 1255.707)"/>
+      <rect id="矩形_431" data-name="矩形 431" class="cls-2" width="32.637" height="32.637" rx="5.985" transform="translate(-1238.438 1255.707)"/>
+      <rect id="矩形_432" data-name="矩形 432" class="cls-2" width="32.637" height="32.637" rx="5.985" transform="translate(-1280.067 1298.004)"/>
+      <rect id="矩形_433" data-name="矩形 433" class="cls-2" width="32.637" height="32.637" rx="5.985" transform="translate(-1238.438 1298.004)"/>
+      <rect id="矩形_434" data-name="矩形 434" class="cls-3" width="32.637" height="32.637" rx="5.985" transform="translate(-1238.438 1340.302)"/>
+      <rect id="矩形_435" data-name="矩形 435" class="cls-3" width="32.637" height="32.637" rx="5.985" transform="translate(-1196.434 1255.707)"/>
+      <rect id="矩形_436" data-name="矩形 436" class="cls-3" width="32.637" height="32.637" rx="5.985" transform="translate(-1196.434 1298.004)"/>
+      <rect id="矩形_437" data-name="矩形 437" class="cls-4" width="86.19" height="86.19" transform="translate(-1286.115 1250.414)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="126" height="57" viewBox="0 0 126 57">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #68c494;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 19px;
+        font-family: MicrosoftYaHei-Bold, Microsoft YaHei;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+      }
+    </style>
+  </defs>
+  <g id="组_2_拷贝_4" data-name="组 2 拷贝 4" transform="translate(-0.49 -4.871)">
+    <rect id="圆角矩形_4_拷贝" data-name="圆角矩形 4 拷贝" class="cls-1" width="126" height="52" rx="15" transform="translate(0.49 9.871)"/>
+    <rect id="圆角矩形_4" data-name="圆角矩形 4" class="cls-2" width="126" height="49" rx="15" transform="translate(0.49 4.871)"/>
+    <text id="下一题" class="cls-3" transform="translate(34.49 36.871)"><tspan x="0" y="0">下一题</tspan></text>
+  </g>
+</svg>

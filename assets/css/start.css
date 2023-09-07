@@ -1,0 +1,12 @@
+body { width: 100vw; height: 100vh; }
+body .hepan { width: 100%; height: 100%; background-size: 100% 100%; display: flex; justify-content: center; align-items: center; }
+body .hepan .content { width: 51%; height: 60%; display: flex; justify-content: space-around; align-items: flex-end; }
+body .hepan .content .yuwen { background-size: 100% 100%; cursor: pointer; }
+body .hepan .content .yuwen:hover { animation: scaleB 2s linear infinite; }
+body .hepan .content .math { background-size: 100% 100%; cursor: pointer; }
+body .hepan .content .math:hover { animation: scaleB 2s linear infinite; }
+body .hepan .quit { width: 100%; height: 100%; background-size: 100% 100%; position: absolute; right: 4%; bottom: 6%; cursor: pointer; }
+body .hepan .quit:hover { animation: scaleB 2s linear infinite; }
+body audio { display: none; }
+
+/*# sourceMappingURL=start.css.map */

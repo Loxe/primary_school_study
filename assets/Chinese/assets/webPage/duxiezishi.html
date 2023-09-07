@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>语文（国家统编教材）一年级上</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/level3.css">
+    <link rel="stylesheet" href="../css/duxiezishi.css">
+</head>
+<body>
+<div id="level3" class="duxiezishi" data-file="common" data-img="background.jpg">
+    <div class="contain">
+        <div class="window" remw="10.4" remh="7.85">
+            <span class="bambooL" data-file="common" data-img="bambooL.png" remw="0.34" remh="7.61"></span>
+            <span class="bambooR" data-file="common" data-img="bambooR.png" remw="0.34" remh="7.61"></span>
+            <div class="screen" data-file="common" data-img="screen.png" remw="10.4" remh="7.85">
+                <div class="duxiezishiContent">
+                    <span class="isbg"></span>
+                    <div class="page zishi">
+                        <div class="item left" audio-path="../video/9.读写姿势/音频/1.男生图片旁白.mp3">
+                            <span class="img" data-to="du" remw="4.5" remh="3.5" data-img="correctDu.jpg"></span>
+                        </div>
+                        <div class="item right" audio-path="../video/9.读写姿势/音频/2.女生图片旁白.mp3">
+                            <span class="img" data-to="xie" remw="4.5" remh="3.5" data-img="correctXie.jpg"></span>
+                        </div>
+                    </div>
+                    <div class="page du" data-img="du.png">
+                    </div>
+                    <div class="page xie">
+                        <video src="" data-video="../video/9.读写姿势/读写姿势.mp4"></video>
+                    </div>
+                </div>
+                <div class="btn">
+                    <div data-file="common" data-img="prePage.png" remw="1.3" remh="0.8"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="panda nature" data-file="common" data-img="panda.gif" remw="3.18" remh="2.55"></span>
+    <img id="leaf" class="leaf nature" src="../images/common/leaf/0.png"/>
+    <span class="bamboo nature" data-file="common" data-img="bamboo.png"></span>
+    <span audio-path="../audio/语文一音频/返回.mp3" class="return nature" data-file="common" data-img="back_text.png"
+          remw="1.89" remh="1.63"></span>
+</div>
+<script src="../js/Browser.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/imgLoad.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/loopImg.js"></script>
+<script src="../js/playAudio.js"></script>
+<script>
+var index = 0
+var pageNumber = 'zishi'
+$(window).on('load', function () {
+    saveChildPath()
+    showPage(pageNumber)
+    loopImg('leaf','../images/common/leaf','png',0,41,8000)
+    //所有按钮的音频绑定
+    playAudio()
+})
+
+$('.return').on('click', function () {
+    window.history.back()
+    return false
+})
+$('.zishi').on('click', '.img', function () {
+    showPage($(this).attr('data-to'))
+})
+$('.btn').on('click', function () {
+    showPage('zishi')
+    $('video').trigger('pause')
+    $('video').attr('src', '')
+})
+
+function showPage (page) {
+    $('.' + page).show().siblings('.page').hide()
+    if (page == 'zishi') {
+        $('.isbg').attr('data-img', 'duxieBeijing.bmp')
+        $('.btn').hide()
+    }
+    if (page == 'du') {
+        $('.isbg').attr('data-img', 'Image17.bmp')
+        $('.btn').show()
+        $('audio').trigger('pause')
+    }
+    if (page == 'xie') {
+        $('video').attr('src', $('video').attr('data-video'))
+        $('video').trigger('play')
+        $('.btn').show()
+        $('audio').trigger('pause')
+    }
+    imgLoad()
+}
+</script>
+</body>
+</html>

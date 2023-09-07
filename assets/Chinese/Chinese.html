@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>语文（国家统编教材）一年级上</title>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/alert/alert.js"></script>
+    <link rel="stylesheet" href="assets/js/alert/alert.css">
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/Browser.js"></script>
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    iframe {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    </style>
+</head>
+<body>
+<iframe id="iframe" src="" frameborder="0"></iframe>
+<script>
+var base = new Base64()
+var path = './assets/webPage/index.html' // 默认地址
+var borwser = new Browser().browser
+if (borwser == '360EE' || borwser == 'Chrome' || borwser == 'Safari') {// 用localcun ky d
+    if (localStorage && localStorage.path) { // 有session.path
+        path = localStorage.path
+    } else if (!localStorage) { // 不支持session
+        path = getUrlParam('path') ? base.decode(getUrlParam('path')) : './assets/webPage/index.html'
+    }
+} else {
+    path = getUrlParam('path') ? base.decode(getUrlParam('path')) : './assets/webPage/index.html'
+}
+
+$('#iframe').attr('src', path)
+if (borwser == 'Chrome' || borwser == 'Firefox') {
+    var sp = path.split('/').pop()
+    var name = sp.split('.html')[0]
+    if (name == 'Chinese' || name == 'window' || name == 'zhishituozhan' || name == 'zicipandian' || name == 'duxiezishi' || name == 'kantingduxie') {
+        fyAlert.alert({
+            title: '温馨提示',
+            content: '即将播放声音哦',
+            btns: {                  //按钮组
+                '知道了': function (obj) {
+                    obj.destory()   //在页面上
+                    $('#iframe').attr('src', path)
+                }
+            }
+        })
+    }
+}
+window.addEventListener('message', function (event) {
+    var path = event.data
+    changeURLParam('path', path)
+}, false)
+</script>
+</body>
+</html>

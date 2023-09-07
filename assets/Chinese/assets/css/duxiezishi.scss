@@ -1,0 +1,99 @@
+.duxiezishi {
+  .isbg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-size: 100% 100%;
+  }
+
+  .screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .duxiezishiContent {
+      width: 96%;
+      height: 93.8%;
+      position: relative;
+      margin-bottom: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .page {
+        width: 100%;
+        height: 100%;
+
+        &.zishi {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.left {
+              width: 50%;
+              height: 100%;
+
+              .img {
+                margin-right: 2%;
+                cursor: pointer;
+              }
+            }
+
+            &.right {
+              width: 50%;
+              height: 100%;
+
+              .img {
+                margin-left: 2%;
+                cursor: pointer;
+              }
+            }
+
+            .img {
+              background-size: 100% 100%;
+              transition: all linear 0.5s;
+
+              &:hover {
+                transform: scale(1.05);
+              }
+            }
+          }
+        }
+
+        &.du {
+          background-size: 100% 100%;
+        }
+
+        &.xie {
+          video {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .btn {
+      position: absolute;
+      right: 5%;
+      bottom: 5%;
+      display: none;
+      cursor: pointer;
+
+      div {
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

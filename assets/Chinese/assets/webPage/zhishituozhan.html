@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>语文（国家统编教材）一年级上</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/level3.css">
+    <link rel="stylesheet" href="../css/kantingduxie.css">
+</head>
+<body>
+    <style>
+        #level3 .contain .window .screen .content .controlRow ul li img {
+            width: 91%;
+    }
+        </style>   
+<div id="level3" data-file="common" data-img="background.jpg">
+    <div class="contain">
+        <div class="window" remw="10.4" remh="7.85">
+            <span class="bambooL" data-file="common" data-img="bambooL.png" remw="0.34" remh="7.61"></span>
+            <span class="bambooR" data-file="common" data-img="bambooR.png" remw="0.34" remh="7.61"></span>
+            <div class="screen trans" data-file="common" data-img="screen.png" remw="10.4" remh="7.85">
+                <div class="content"></div>
+                <ul class="pageUpDown">
+                    <li class="nextPage" data-file="common" data-img="nextPage.png" remw="1.3" remh="0.8"></li>
+                    <li style="display: none" class="firstPage" data-file="common" data-img="prePage.png" remw="1.3" remh="0.8"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 新增汉字图片 -->
+    <span class="panda nature" data-file="common" data-img="panda.hz" remw="0.18" remh="0.55"></span>
+    <span class="panda nature" data-file="common" data-img="panda.gif" remw="3.18" remh="2.55"></span>
+    <img id="leaf" class="leaf nature" src="../images/common/leaf/0.png"/>
+    <span class="bamboo nature" data-file="common" data-img="bamboo.png"></span>
+    <span audio-path="../audio/语文一音频/返回.mp3" class="return nature" data-file="common" data-img="back_text.png"
+          remw="1.89"
+          remh="1.63"></span>
+    <audio class="audio" src=""></audio>
+    <audio class="pangBaiAudio" src=""></audio>
+    <audio class="audioforvideo" src=""></audio>
+    <audio class="audioforImg" src=""></audio>
+    <audio class="answerAudio" src=""></audio>
+</div>
+<script src="../js/Browser.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/imgLoad.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/config.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/loopImg.js"></script>
+<script src="../js/playAudio.js"></script>
+
+<script>
+var lesson = ''
+var index = 0
+var currentBtn = 'zhishi'
+var pageNumber = 1
+var pageSize = 0
+var currentType = ''
+var currentGuess = 0
+$(window).on('load', function () {
+    saveChildPath()
+    setContent(currentBtn)
+    imgLoad()
+    loopImg('leaf','../images/common/leaf','png',0,41,8000)
+    //所有按钮的音频绑定
+    playAudio()
+})
+
+function getLesson () {
+    var lessonId = getUrlParam('lessonId')
+    var name = getUrlParam('name')
+    menu.map(function (item) {
+        if (item.name != '汉语拼音') {
+            item.learn.map(function (page) {
+                page.map(function (s) {
+                    if (s.lessonId == lessonId && s.name == name) {
+                        lesson = s.lesson
+                    }
+                })
+            })
+        }
+    })
+}
+
+function setContent (key) {
+    getLesson()
+    var pages = lesson[key]
+    $('.content').html('')
+    pageSize = pages.length
+    buildPage()
+    for (var i = 0; i < pages.length; i++) {
+        var page = pages[i]
+        var content = page.content
+        var html = ''
+        switch (page.type) {
+            case 'zhishiFull':
+                html = render.renderzhishiFull(content, page.crossIntr)
+                break
+            case 'controlFull':
+                html = render.rendercontrolFull(content)
+                break
+            case 'controlRow':
+                html = render.rendercontrolRow(content)
+                break
+            case 'guess':
+                html = render.renderGuess(content)
+                break
+            case 'halfRow':
+                html = render.renderHalfRow(content)
+                break
+            case 'imgAndAudio':
+                html = render.renderImgAndAudio(content)
+                break
+            case 'videoAndAudio':
+                html = render.renderVideoAndAudio(content)
+                break
+        }
+        $('.content .page:nth-child(' + (i + 1) + ')').html(html)
+        $('.videoAndAudio video').off('ended')
+        $('.videoAndAudio video').on('ended', function () {
+            $('.dui-audio').show()
+        })
+        $('.content .page:nth-child(' + (i + 1) + ') .' + page.type).attr('data-pangbai-audio', page.audio)
+        $('video').off('timeupdate')
+        $('video').on('timeupdate', function () {
+            if ($(this)[0].currentTime > 0) {
+                $(this)[0].muted = false
+            }
+        })
+    }
+    showPage(1)
+    remToPx()
+    imgLoad()
+}
+
+function showPage (png) {
+    pageNumber = png
+    remToPx()
+    var page = $('.content .page:nth-child(' + pageNumber + ')')
+    // 显示当前页
+    page.addClass('show').siblings().removeClass('show')
+    // 页面初始化停止音频。停止gif,停止视频
+    if ($('.gif')) {
+        $('.gif').attr('src', '')
+    }
+    $('video').trigger('pause')
+    $('audio').trigger('pause')
+    // 旁白
+    var hasPangBai = page.children().attr('data-pangbai-audio')
+    if (hasPangBai) {
+        $('.pangBaiAudio').attr('src', hasPangBai)
+        $('.pangBaiAudio').off('timeupdate')
+        $('.pangBaiAudio').on('timeupdate', function () {
+            if ($(this)[0].currentTime > 0) {
+                $(this)[0].muted = false
+            }
+        })
+        $('.pangBaiAudio').trigger('play')
+    } else {
+        initPageOption()
+    }
+}
+
+// 当前页的初始化操作
+function initPageOption () {
+    var page = $('.content .page:nth-child(' + pageNumber + ')')
+    var type = page.children().attr('class')
+    var children = page.children()
+    if (type === 'zhishiFull') {
+        children.find('video').attr('src', children.find('video').attr('data-video'))
+        children.find('video').trigger('play')
+    }
+    if (type === 'controlFull') {
+        children.find('.page').show()
+    }
+    if (type === 'controlRow') {
+        // children.find('.btnImg').show()
+        // children.find('.img').show()
+        // children.find('video').trigger('pause')
+    }
+    if (type == 'guess') {
+        currentType = 'guess'
+        currentGuess = 0
+        showGuess(currentGuess)
+    }
+    if (type === 'videoAndAudio') {
+        children.find('video').attr('src', children.find('video').attr('data-video'))
+        children.find('video').trigger('play')
+    }
+    if (type === 'imgAndAudio') {
+        $('.dui-audio').show()
+    }
+}
+
+function showGuess (index) {
+    $('.content').find('li:nth-child(' + (index + 1) + ')').css('opacity', 1).next().css('opacity', 0).next().css('opacity', 0)
+    var audio = $('.content').find('li:nth-child(' + (index + 1) + ') img:first-child').attr('data-audio')
+    $('.audio').attr('src', audio)
+    if (index < 3) {
+        $('.audio').trigger('play')
+    }
+}
+
+function buildPage () {
+    // 生成分页
+    if (pageSize > 1) {
+        $('.pageUpDown').show()
+    } else {
+        $('.pageUpDown').hide()
+    }
+
+    // 生成对应的内容框
+    $('.content').html('')
+    var html = ''
+    for (var i = 0; i < pageSize; i++) {
+        html += '<div class="page"></div>'
+    }
+    $('.content').html(html)
+}
+
+function stopPlay () {
+    $('.pangBaiAudio').trigger('pause')
+    // 停止音频。停止gif,停止视频
+    if ($('.gif')) {
+        $('.gif').attr('src', '')
+    }
+    $('video').trigger('pause')
+
+    $('audio:not(.bgAudio)').trigger('pause')
+}
+
+var render = {
+    renderzhishiFull: function (content, crossIntr) {
+        var html = '<div class="zhishiFull" remw="9.85" remh="7.39">'
+        content.map(function (item) {
+            if (item.img) {
+                html += '<img src="' + item.img + '" alt="">'
+            } else if (item.video) {
+                if (crossIntr) {
+                    html += '<video class="video" muted data-video="' + item.video + '"></video>'
+                } else {
+                    html += '<video class="video" muted controls data-video="' + item.video + '"></video>'
+                }
+            }
+        })
+        html += '</div>'
+        return html
+    },
+    rendercontrolFull: function (content) {
+        var html = ' <div class="controlFull" remw="9.85" remh="7.39">'
+        content.map(function (item) {
+            html += '<img src="' + item.img + '" class="img center">'
+            html += '<img src="' + item.btnImg + '" class="btnImg" remw="1.71" remh="0.95">'
+            html += '<video data-video="' + item.video + '" class="video center" muted></video>'
+            html += ' </div>'
+        })
+        return html
+    },
+    rendercontrolRow: function (content) {
+        var html = '<div class="controlRow" remw="9.85" remh="7.39">'
+        html += '    <ul class="rowNumber' + content.length + '">'
+        content.map(function (item) {
+            html += '<li>'
+            html += '    <img class="hz"  src="' + item.hz + '">'
+            html += '    <img class="pandaStart" data-img="' + item.img + '"  data-gif="' + item.gif + '"  src="' + item.pandaStart + '">'
+            html += '    <img class="img"  src="' + item.img + '">'
+            // html += '    <img class="gif" data-gif="' + item.gif + '">'
+            html += '</li>'
+        })
+        html += '    </ul>'
+        html += '</div>'
+        return html
+    },
+    renderGuess: function (content) {
+        var html = '<div class="guess" data-img="caimiyu-beijing.jpg" remw="9.85" remh="7.39">'
+        html += '<ul>'
+        content.map(function (item) {
+            html += '<li>'
+            html += '    <img data-audio="' + item.audio + '" src="' + item.img + '">'
+            html += '    <img src="' + item.answer + '">'
+            html += '    <img class="hide" data-answer-audio="' + item.answerAudio + '" data-audio="' + item.audio + '" src="' + item.hide + '">'
+            html += '</li>'
+        })
+        html += '    </ul>'
+        html += '</div>'
+        return html
+    },
+    renderHalfRow: function (content) {
+        var html = '<div class="halfRow" data-img="riyueming-beijing.jpg" remw="9.85" remh="7.39">'
+        html += '<ul>'
+        content.map(function (item) {
+            html += '<li class="halfRowLi">'
+            html += '    <img class="zi"  data-audio="' + item.audio + '" src="' + item.img + '">'
+            html += '</li>'
+        })
+        html += '    </ul>'
+        html += '</div>'
+        return html
+    },
+    renderImgAndAudio: function (content) {
+        var html = '<div class="imgAndAudio">'
+        content.map(function (item) {
+            html += '<img src="' + item.img + '" class="img">'
+            html += '<div class="audioBtnBox" controls="true">'
+            item.audioBtns.map(function (audioBtn) {
+                html += '<div class="dui-audio" style="top:' + audioBtn.top + ';left:' + audioBtn.left + ';"'
+                html += 'data-file="common" data-img="laba.png" remw="0.74" remh="0.74"  data-audio="' + audioBtn.audio + '"></div>'
+            })
+            html += '</div>'
+        })
+        html += '</div>'
+        return html
+    },
+    renderVideoAndAudio: function (content) {
+        var html = '<div class="videoAndAudio">'
+        content.map(function (item) {
+            html += '<video src="' + item.video + '" class="video" muted remw="10" remh="7.35"></video>'
+            // html += '<div class="audioBtnBox" controls="true" remw="10" remh="7.35">'
+            item.audioBtns.map(function (audioBtn) {
+                html += '<div class="dui-audio" style="top:' + audioBtn.top + ';left:' + audioBtn.left + ';"'
+                html += 'data-file="common" data-img="laba.png" remw="0.74" remh="0.74" data-audio="' + audioBtn.audio + '"></div>'
+            })
+            // html += '</div>'
+        })
+        html += '</div>'
+        return html
+    }
+}
+
+$('.pageUpDown').on('click', 'li:first-child', function () {
+    $('video').trigger('pause')
+    $('audio').trigger('pause')
+    pageNumber++
+    if (pageNumber > 1) {
+        $(this).next().show()
+    }
+    if (pageNumber == pageSize) {
+        $(this).hide()
+    }
+    showPage(pageNumber)
+})
+$('.pageUpDown').on('click', 'li:last-child', function () {
+    $('video').trigger('pause')
+    $('audio').trigger('pause')
+    pageNumber--
+    if (pageNumber == pageSize) {
+        $(this).prev().hide()
+    }
+    if (pageNumber == 1) {
+        $(this).prev().show()
+        $(this).hide()
+    }
+    showPage(pageNumber)
+})
+//controlFull
+$('.content').on('click', '.controlFull .btnImg', function () {
+    $('.img').hide()
+    $('.btnImg').hide()
+    $('.btnImg').next().attr('src', $('.btnImg').next().attr('data-video'))
+    $('.btnImg').next().trigger('play')
+})
+
+//controlRow
+$('.content').on('click', '.controlRow .pandaStart', function () {
+    
+    for(let i = 0;i<$('.controlRow .pandaStart').length;i++){
+      var img = $('.controlRow .pandaStart').eq(i).attr('data-img')
+      $('.controlRow .pandaStart').eq(i).next().attr('src',img)
+    }
+    var gif = $(this).attr('data-gif')
+    $(this).next().attr('src', gif)
+})
+//guess
+$('.content').on('click', '.guess .hide', function () {
+    $(this).hide()
+    $('.guess li:nth-child(' + (currentGuess + 1) + ') img:nth-child(2)').css('opacity', 1)
+    $('.answerAudio').attr('src', $(this).attr('data-answer-audio'))
+    $('.answerAudio').trigger('play')
+    currentGuess++
+    showGuess(currentGuess)
+})
+$('.audio').on('ended', function () {
+    if (currentType = 'guess') {
+        $('.guess li:nth-child(' + (currentGuess + 1) + ') .hide').css('opacity', 1)
+    }
+})
+//halfRow
+$('.content').on('click', '.halfRow .zi', function () {
+    stopPlay()
+    $(this).css('opacity', 1)
+    $('.audio').attr('src', $(this).attr('data-audio'))
+    $('.audio').trigger('play')
+})
+
+$('.content').on('click', '.buttonList .wbbtn', function () {
+    stopPlay()
+    var audio = $(this).attr('data-audio')
+    $('.audioforvideo').attr('src', audio)
+    $('.audioforvideo').trigger('play')
+    var index = $('.buttonList .wbbtn').index($(this))
+    $('.follow .followItem0').hide()
+    $('.follow .followItem1').hide()
+    $('.follow .followItem2').hide()
+    $('.follow .followItem' + index).show()
+})
+//audioforvideo
+//视频放完出现喇叭的点击事件
+$('.content').on('click', '.videoAndAudio .dui-audio', function () {
+    var audio = $(this).attr('data-audio')
+    $('.audioforvideo').attr('src', audio)
+    $('.audioforvideo').trigger('play')
+})
+
+$('.pangBaiAudio').on('ended', function () {
+    initPageOption()
+})
+$('#video').on('ended', function () {
+    if (lesson.btn2[0].type && lesson.btn2[0].type == 'videoAndAudio') {
+        $('.dui-audio').show()
+    }
+})
+$('.return').on('click', function () {
+    window.history.back()
+    return false
+})
+$('.content').on('click', '.imgAndAudio .dui-audio', function () {
+    var audio = $(this).attr('data-audio')
+    $('.audioforImg').attr('src', audio)
+    $('.audioforImg').trigger('play')
+})
+
+</script>
+</body>
+</html>

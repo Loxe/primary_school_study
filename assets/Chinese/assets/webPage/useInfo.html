@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>语文（国家统编教材）一年级上</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/info.css">
+    <link rel="stylesheet" href="../js/scrollBar/jquery.mCustomScrollbar.css">
+</head>
+<body>
+<div class="info" data-file="info" data-img="background.png">
+    <div class="content">
+        <img class="title" src="../images/info/title.png" remw="8.67" remh="1.26">
+        <div id="use" class="main">
+            <div remw="7.8" class="scrollBar">
+                <div remw="7.45" class="inforContent-beijing" data-file="info" data-img="inforContent-beijing.png">
+                    <img remw="7.45" class="use" src="../images/info/useText.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <img audio-path="../audio/语文一音频/返回.mp3" class="return" src="../images/common/back_text.png" remw="1.89" remh="1.63">
+    <div>
+        <img src="../images/info/songshu.png" class="songshu" remw="0.91" remh="1.25">
+        <img src="../images/info/tail.gif" class="tail" remw="19.2" remh="9.5">
+    </div>
+</div>
+<script src="../js/Browser.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/imgLoad.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/playAudio.js"></script>
+<script src="../js/scrollBar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+$(window).on('load', function () {
+    saveChildPath()
+    $('.scrollBar').mCustomScrollbar()
+    setTitle()
+    //所有按钮的音频绑定
+    playAudio()
+})
+
+$('.return').on('click', function () {
+    window.history.back()
+    return false
+})
+
+function setTitle () {
+    var name = getUrlParam('name')
+    $('.title').html(name)
+}
+
+getUrlParam(name)
+</script>
+</body>
+</html>

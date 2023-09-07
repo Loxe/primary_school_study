@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="225.212" height="219.741" viewBox="0 0 225.212 219.741">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffebb8;
+      }
+
+      .cls-2 {
+        fill: #ff9cb3;
+      }
+
+      .cls-3 {
+        fill: #d95b78;
+      }
+
+      .cls-4, .cls-7 {
+        fill: #fff;
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        font-size: 24.553px;
+      }
+
+      .cls-5 {
+        fill: none;
+        stroke: #964615;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .cls-6 {
+        fill: #964615;
+      }
+
+      .cls-7 {
+        font-size: 24.686px;
+      }
+    </style>
+  </defs>
+  <g id="组_2693" data-name="组 2693" transform="translate(2036.052 -867.49)">
+    <rect id="矩形_390" data-name="矩形 390" class="cls-1" width="225.212" height="219.741" transform="translate(-2036.052 867.49)"/>
+    <g id="组_2692" data-name="组 2692">
+      <rect id="矩形_391" data-name="矩形 391" class="cls-2" width="196.396" height="47.518" rx="7.162" transform="translate(-2021.643 968.163)"/>
+      <g id="组_2687" data-name="组 2687">
+        <rect id="矩形_392" data-name="矩形 392" class="cls-3" width="3.431" height="17.627" transform="translate(-1999.394 968.163)"/>
+      </g>
+      <g id="组_2688" data-name="组 2688">
+        <rect id="矩形_393" data-name="矩形 393" class="cls-3" width="3.431" height="17.627" transform="translate(-1959.869 968.163)"/>
+      </g>
+      <g id="组_2689" data-name="组 2689">
+        <rect id="矩形_394" data-name="矩形 394" class="cls-3" width="3.431" height="17.627" transform="translate(-1923.956 968.163)"/>
+      </g>
+      <g id="组_2690" data-name="组 2690">
+        <rect id="矩形_395" data-name="矩形 395" class="cls-3" width="3.431" height="17.627" transform="translate(-1887.935 968.163)"/>
+      </g>
+      <g id="组_2691" data-name="组 2691">
+        <rect id="矩形_396" data-name="矩形 396" class="cls-3" width="3.431" height="17.627" transform="translate(-1853.665 968.163)"/>
+      </g>
+      <text id="_3" data-name="3" class="cls-4" transform="translate(-2003.934 1006.962)"><tspan x="0" y="0">3</tspan></text>
+      <text id="_4" data-name="4" class="cls-4" transform="translate(-1964.227 1006.962)"><tspan x="0" y="0">4</tspan></text>
+      <path id="路径_5999" data-name="路径 5999" class="cls-5" d="M-1958.154,963.273s9.709-24.234,53.358-24.234c37.81,0,50.656,21.606,50.656,21.606"/>
+      <path id="路径_6000" data-name="路径 6000" class="cls-6" d="M-1862.68,959.185l10.73-6.46.934,13.029Z"/>
+      <text id="_" data-name="?" class="cls-7" transform="translate(-1858.41 1006.605)"><tspan x="0" y="0">?</tspan></text>
+    </g>
+  </g>
+</svg>

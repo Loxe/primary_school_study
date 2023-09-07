@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>语文（国家统编教材）一年级上</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/unit.css">
+</head>
+<body>
+<div class="wrapper" data-img="background-color.png" rewm="19.2" rewh="9.5">
+    <div id="unit" data-img="background.png" rewm="19.2" rewh="9.58">
+        <img src="../images/unit/chuan1.png" id="chuan1"/>
+        <img src="../images/unit/chuan2.png" id="chuan2"/>
+        <div id="yz">
+            <span class="shitingxinshang" audio-path="../audio/语文一音频/课文朗读.mp3">
+                <img src="../images/unit/yanzi1.png">
+                <img src="../images/unit/shitingxinshang.png" rewm="1.43" rewh="1.57">
+            </span>
+            <span class="zicipandian" audio-path="../audio/语文一音频/yanzi/字词盘点.mp3">
+                <img src="../images/unit/yanzi2.png">
+                <img src="../images/unit/zicipandian.png" rewh="1.53" rewm="1.41"/>
+            </span>
+            <span class="youxileyuan" audio-path="../audio/语文一音频/yanzi/游戏乐园.mp3">
+                <img src="../images/unit/yanzi3.png">
+                <img src="../images/unit/youxileyuan.png" rewh="153" rewm="140"/>
+            </span>
+            <span class="zhishituozhan" audio-path="../audio/语文一音频/yanzi/知识拓展.mp3">
+                <img src="../images/unit/yanzi4.png">
+                <img src="../images/unit/zhishituozhan.png" rewm="1.46" rewh="1.52">
+            </span>
+        </div>
+        <div class="tit" data-img="titBack.png" remF="0.5">
+        </div>
+        <a audio-path="../audio/语文一音频/返回.mp3" class="return" remw="1.8">
+            <img src="../images/common/back.png" alt="">
+            <img src="../images/common/back_text.png" alt="">
+        </a>
+    </div>
+</div>
+<script src="../js/Browser.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/imgLoad.js"></script>
+<script src="../js/playAudio.js"></script>
+
+<script>
+$(window).on('load', function () {
+    saveChildPath()
+    setTitle()
+    playAudio()
+    $('#unit .tit').addClass('active')
+    $('#unit .return').addClass('active')
+    $('#yz').addClass('active')
+})
+
+function setTitle () {
+    var name = getUrlParam('name')
+    $('.tit').html(name)
+}
+
+$('.shitingxinshang').on('click', function () {
+    window.location.href = 'window.html?name=' + encodeURIComponent(getUrlParam('name')) + '&lessonId=' + encodeURIComponent(getUrlParam('lessonId'))
+})
+$('.youxileyuan').on('click', function () {
+    window.location.href = 'youxileyuan.html?name=' + encodeURIComponent(getUrlParam('name')) + '&lessonId=' + encodeURIComponent(getUrlParam('lessonId'))
+})
+$('.zicipandian').on('click', function () {
+    window.location.href = 'zicipandian.html?name=' + encodeURIComponent(getUrlParam('name')) + '&lessonId=' + encodeURIComponent(getUrlParam('lessonId'))
+})
+$('.zhishituozhan').on('click', function () {
+    window.location.href = 'zhishituozhan.html?name=' + encodeURIComponent(getUrlParam('name')) + '&lessonId=' + encodeURIComponent(getUrlParam('lessonId'))
+})
+$('.return').on('click', function () {
+    window.history.back()
+    return false
+})
+</script>
+</body>
+</html>

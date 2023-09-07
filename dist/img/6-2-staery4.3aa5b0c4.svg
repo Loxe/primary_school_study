@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170.179" height="124.847" viewBox="0 0 170.179 124.847">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #33aa63;
+      }
+
+      .cls-2 {
+        fill: #b2b2b2;
+      }
+    </style>
+  </defs>
+  <g id="组_3048" data-name="组 3048" transform="translate(-665 -1090.819)">
+    <path id="路径_7332" data-name="路径 7332" class="cls-1" d="M811.121,1188.593c-5.817-11.915-49.192-32.684-55.774-34-3.542-.706-3.244.219-3.244.219l-5.082,4.749c-3.694,1.54.518,7.676,4.922,14.406,14.372,26.684,28.578,41.907,44.138,41.694C812.754,1208.311,816.938,1200.508,811.121,1188.593Zm-5.564,13.821c-4.353,4.738-13.736,7.536-27.625-7.481,0,0-11.766-17.326,10.915-17.259C799.383,1178.445,809.91,1197.677,805.557,1202.414Z"/>
+    <path id="路径_7333" data-name="路径 7333" class="cls-1" d="M825.468,1117.431c-17.537-8.276-56.921,7.6-63.793,10.454s-5.918,5.184-5.918,5.184a66.925,66.925,0,0,0,1.775,7.744c.842,2.336,2.529,3.7,30.645,10.013,30.218,5.37,41.809,1.512,45.606-8.089S833.239,1122.832,825.468,1117.431Zm5.271,20.726c-3.1,9.781-17.212,11.758-30.178,7.048,0,0-14.347-9.972,3.327-21.648C816.2,1118.625,833.84,1128.375,830.739,1138.157Z"/>
+    <path id="路径_7334" data-name="路径 7334" class="cls-2" d="M672.593,1092.259s56.674,58.626,74.428,67.3l3.514-3.284a39.1,39.1,0,0,1-8.7-12.2c-3.842-8.068-32.024-31.694-60.868-51.629C680.963,1092.454,674.95,1088.909,672.593,1092.259Z"/>
+    <image id="矩形_696" data-name="矩形 696" width="92" height="23" transform="translate(665 1124)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAXCAYAAACGcCj3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHySURBVGhD7ZcLboJAEIblJBJDIt7/QMpFbPmtY8dhXstS64Mvadh57Arf1NA2p9Ppa2SDH4DrbrdrLsHK4qjCtWvXdesQFiAt3Lru9/t1EAU0x+Pxx9wISQSRaFxpbbEOY0oDafgtv8YTsUDmeO18Pl9XPnwP0ff9xw1kIhxYguUVWGuPbB94t6G4wglLqlzLfRKrHu0DmZ7D4fD0w7kIJ4ZhGMPfuHQNEMuch9c7txbRNNO5POqbdCeckOIBxTyvreU+jlfjLNGn1TTRHKtOeV7P5Ojatu2tSRUONOlA5ry45oXqUdLv9XJZGrLOYykVeDkA8aZwwhJPUE328Nja750rqemlmD+8hlaPcrTWckDuD4VL5AuWw8/S1iWfle3N9Fk9UgZHE8mxpMr+SVwiQeLJJ+T5FHufm7mnOfcd7fHEEaHQ4Iwq4ZK/GoCG1x+dRXVViJIDnljAY+sMsKhwSekAaiSCqMerawLRb4nVpGo54rYv8yBLkRkA4PeUub+5z2DtsyRzeM4Sjfx2u70rPlS4RvYlHFHTS3GJWEsy/5tb49+Fa8z5JniU9pWIJyLRxFMKt8gOgsg8W6bHk50VTbyUcI3oHzMLbw/VpNxa2eDlhUfMHQjg+7jsOaKJtxfukRkG6kvJBh8t3MMaRp3wzeYbniYZD9H9TLoAAAAASUVORK5CYII="/>
+    <circle id="椭圆_994" data-name="椭圆 994" class="cls-2" cx="3.297" cy="3.297" r="3.297" transform="translate(727.869 1135.191)"/>
+  </g>
+</svg>

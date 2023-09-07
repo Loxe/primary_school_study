@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="70" viewBox="0 0 118 70">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #68c494;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 21px;
+        font-family: MicrosoftYaHei-Bold, Microsoft YaHei;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+      }
+    </style>
+  </defs>
+  <g id="组_2" data-name="组 2" transform="translate(-2.078 0.353)">
+    <rect id="圆角矩形_4_拷贝" data-name="圆角矩形 4 拷贝" class="cls-1" width="118" height="59" rx="15" transform="translate(2.078 10.647)"/>
+    <rect id="圆角矩形_4" data-name="圆角矩形 4" class="cls-2" width="118" height="59" rx="15" transform="translate(2.078 -0.353)"/>
+    <text id="重_做" data-name="重 做" class="cls-3" transform="translate(61.079 37.647)"><tspan x="-25.177" y="0">重 做</tspan></text>
+  </g>
+</svg>

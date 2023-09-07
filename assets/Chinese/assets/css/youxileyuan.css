@@ -1,0 +1,9 @@
+.youxileyuan { width: 100%; height: 100%; overflow: hidden; }
+.youxileyuan iframe { width: 96%; height: 94%; position: absolute; top: 2%; left: 2%; border: none; margin: 0; overflow: hidden; }
+.youxileyuan .gameSelect { width: 100%; height: 100%; background-size: 100% 100%; display: flex; justify-content: center; align-items: flex-end; }
+.youxileyuan .gameSelect .gameContent { width: 95%; height: 55%; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; }
+.youxileyuan .gameSelect .gameContent .eachGame { background-size: 100% 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; margin: 1%; }
+.youxileyuan .gameSelect .gameContent .eachGame:hover { animation: scaleB 2s linear infinite; }
+.youxileyuan .gameSelect .gameContent .eachGame img { width: 120%; max-width: 120%; background-size: 100% 100%; margin-top: -60%; }
+
+/*# sourceMappingURL=youxileyuan.css.map */

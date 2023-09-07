@@ -1,0 +1,19 @@
+body { width: 100vw; height: 100vh; }
+body .info { width: 100%; height: 100%; background-size: 100% 100%; display: flex; justify-content: center; align-items: center; position: relative; }
+body .info .content { width: 60%; height: 92%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; min-width: 520px; }
+body .info .content .title { width: 100%; height: 10%; background-size: 100% 100%; z-index: 1; }
+body .info .content .main { width: 100%; height: 75%; position: relative; display: flex; justify-content: center; align-items: center; }
+body .info .content .main .scrollBar { width: 100%; height: 100%; overflow: auto; }
+body .info .content .main .scrollBar .inforContent-beijing { width: 100%; height: 100%; background-size: 100% 100%; background-repeat: no-repeat; position: relative; }
+body .info .content .main .scrollBar .inforContent-beijing img { width: 100%; max-width: none; }
+body .info .content .main .scrollBar .inforContent-beijing img.use { width: 100%; margin: auto; display: block; }
+body .info .content .main .nobar { width: 100%; height: 100%; overflow: hidden; }
+body .info .content .main .pageUpDown { background-size: 100% 100%; background-repeat: no-repeat; position: absolute; right: 6%; bottom: 6%; z-index: 99999; width: 15%; cursor: pointer; }
+body .info .content .main .pageUpDown li { background-size: 100% 100%; }
+body .info .return { max-width: 11%; position: absolute; right: 11%; bottom: 20%; z-index: 100; cursor: pointer; transition: all .4s ease-in-out; }
+body .info .return:hover { animation: scaleB 2s linear infinite; }
+body .info .songshu { position: absolute; right: 16%; bottom: 3%; z-index: 10; }
+body .info .tail { position: absolute; right: -0.9%; bottom: -0.9%; z-index: 10; pointer-events: none; }
+body audio { display: none; }
+
+/*# sourceMappingURL=info.css.map */

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="223.898" height="226.84" viewBox="0 0 223.898 226.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dbe4ff;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #7da8ff;
+      }
+
+      .cls-3 {
+        fill: #ffe066;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #964615;
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        font-size: 32.358px;
+      }
+
+      .cls-6 {
+        font-size: 24.698px;
+      }
+
+      .cls-7 {
+        stroke: none;
+      }
+
+      .cls-8 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="组_2893" data-name="组 2893" transform="translate(-208.39 -1535.459)">
+    <g id="矩形_539" data-name="矩形 539" class="cls-1" transform="translate(218.39 1545.459)">
+      <rect class="cls-7" width="203.898" height="206.84" rx="13.181"/>
+      <rect class="cls-8" x="-5" y="-5" width="213.898" height="216.84" rx="18.181"/>
+    </g>
+    <g id="组_2892" data-name="组 2892">
+      <path id="路径_7099" data-name="路径 7099" class="cls-2" d="M380.428,1658.068a64.526,64.526,0,1,1-64.537-64.522h.015A64.524,64.524,0,0,1,380.428,1658.068Z"/>
+      <path id="路径_7100" data-name="路径 7100" class="cls-3" d="M315.906,1593.546l-.015,64.522-57.381-29.535a64.863,64.863,0,0,1,57.381-34.987Z"/>
+      <path id="路径_7101" data-name="路径 7101" class="cls-4" d="M315.891,1658.068l-52.561,37.441a64.61,64.61,0,0,1-4.82-66.976Z"/>
+      <text id="_" data-name="?" class="cls-5" transform="translate(266.265 1672.172)"><tspan x="0" y="0">?</tspan></text>
+      <text id="_1" data-name="1" class="cls-6" transform="translate(290.298 1631.229)"><tspan x="0" y="0">1</tspan></text>
+      <text id="_3" data-name="3" class="cls-6" transform="translate(334.111 1673.409)"><tspan x="0" y="0">3</tspan></text>
+      <text id="_5" data-name="5" class="cls-6" transform="translate(309.958 1582.413)"><tspan x="0" y="0">5</tspan></text>
+    </g>
+  </g>
+</svg>

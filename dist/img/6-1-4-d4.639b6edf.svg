@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148.982" height="130.84" viewBox="0 0 148.982 130.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f8f2c6;
+      }
+
+      .cls-2 {
+        fill: #f6ca5c;
+      }
+
+      .cls-3 {
+        fill: #faee83;
+      }
+
+      .cls-4 {
+        fill: #edb361;
+      }
+
+      .cls-5 {
+        fill: #fff;
+        font-size: 37.384px;
+      }
+
+      .cls-5, .cls-7 {
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+      }
+
+      .cls-5, .cls-6 {
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        fill: #ad541e;
+        font-size: 24.036px;
+        font-family: MicrosoftYaHei-Bold, Microsoft YaHei;
+      }
+    </style>
+  </defs>
+  <g id="组_2963" data-name="组 2963" transform="translate(-490.361 -320)">
+    <g id="组_2962" data-name="组 2962">
+      <rect id="矩形_615" data-name="矩形 615" class="cls-1" width="148.982" height="130.84" rx="32.566" transform="translate(490.361 320)"/>
+      <rect id="矩形_616" data-name="矩形 616" class="cls-2" width="131.256" height="112.657" rx="26.927" transform="translate(499.223 329.092)"/>
+      <path id="路径_7166" data-name="路径 7166" class="cls-3" d="M616.336,335.24H513.367c2.828-2.59,5.571-4.1,9.23-4.1h84.509C610.765,331.139,613.508,332.65,616.336,335.24Z"/>
+      <path id="路径_7167" data-name="路径 7167" class="cls-4" d="M616.336,435.637H513.367c2.828,2.59,5.571,4.1,9.23,4.1h84.509C610.765,439.738,613.508,438.227,616.336,435.637Z"/>
+    </g>
+    <text id="_4" data-name="4" class="cls-5" transform="translate(555.506 379.324)"><tspan x="0" y="0">4</tspan></text>
+    <text id="前进2步" class="cls-6" transform="translate(522.788 411.063)"><tspan x="0" y="0">前进</tspan><tspan class="cls-7" y="0">2</tspan><tspan y="0">步</tspan></text>
+  </g>
+</svg>

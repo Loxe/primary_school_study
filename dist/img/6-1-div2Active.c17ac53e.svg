@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="267.733" height="261.715" viewBox="0 0 267.733 261.715">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d8c6e6;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #964615;
+      }
+
+      .cls-2 {
+        font-size: 46.955px;
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="组_2647" data-name="组 2647" transform="translate(1357.283 498.21)">
+    <g id="矩形_368" data-name="矩形 368" class="cls-1" transform="translate(-1347.283 -488.21)">
+      <rect class="cls-4" width="247.733" height="241.715"/>
+      <rect class="cls-5" x="-5" y="-5" width="257.733" height="251.715"/>
+    </g>
+    <g id="组_2646" data-name="组 2646">
+      <text id="_3" data-name="3" class="cls-2" transform="translate(-1287.105 -394.084)"><tspan x="0" y="0">3</tspan></text>
+      <text id="_4" data-name="4" class="cls-2" transform="translate(-1243.198 -310.382)"><tspan x="0" y="0">4</tspan></text>
+      <text id="_" data-name="?" class="cls-2" transform="translate(-1192.15 -394.084)"><tspan x="0" y="0">?</tspan></text>
+      <g id="组_2643" data-name="组 2643">
+        <g id="组_2642" data-name="组 2642">
+          <line id="直线_75" data-name="直线 75" class="cls-3" x2="30.613" y2="41.847" transform="translate(-1268.042 -387.043)"/>
+          <path id="路径_5979" data-name="路径 5979" class="cls-3" d="M-1237.428-343.546a1.648,1.648,0,0,1-1.333-.675l-30.613-41.847a1.65,1.65,0,0,1,.357-2.306,1.651,1.651,0,0,1,2.306.357l30.613,41.847a1.65,1.65,0,0,1-.357,2.306A1.642,1.642,0,0,1-1237.428-343.546Z"/>
+        </g>
+      </g>
+      <g id="组_2645" data-name="组 2645">
+        <g id="组_2644" data-name="组 2644">
+          <line id="直线_76" data-name="直线 76" class="cls-3" y1="40.723" x2="30.347" transform="translate(-1220.298 -385.919)"/>
+          <path id="路径_5980" data-name="路径 5980" class="cls-3" d="M-1220.3-343.546a1.641,1.641,0,0,1-.985-.327,1.651,1.651,0,0,1-.337-2.309l30.347-40.723a1.649,1.649,0,0,1,2.309-.337,1.649,1.649,0,0,1,.337,2.309l-30.347,40.724A1.648,1.648,0,0,1-1220.3-343.546Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

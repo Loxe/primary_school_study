@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="94.662" height="94.662" viewBox="0 0 94.662 94.662">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0d0027;
+      }
+
+      .cls-2 {
+        fill: #fc9210;
+      }
+    </style>
+  </defs>
+  <g id="组_4497" data-name="组 4497" transform="translate(-955.556 -454.621)">
+    <circle id="椭圆_2254" data-name="椭圆 2254" cx="47.331" cy="47.331" r="47.331" transform="translate(955.556 454.621)"/>
+    <ellipse id="椭圆_2255" data-name="椭圆 2255" class="cls-1" cx="38.601" cy="46.514" rx="38.601" ry="46.514" transform="translate(973.017 455.438)"/>
+    <circle id="椭圆_2256" data-name="椭圆 2256" class="cls-2" cx="20.169" cy="20.169" r="20.169" transform="translate(982.718 481.783)"/>
+    <ellipse id="椭圆_2257" data-name="椭圆 2257" class="cls-2" cx="16.449" cy="19.821" rx="16.449" ry="19.821" transform="translate(990.159 482.131)"/>
+  </g>
+</svg>

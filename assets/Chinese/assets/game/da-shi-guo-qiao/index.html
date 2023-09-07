@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小兔拼图</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="dnd.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <!-- 声音 -->
+    <audio id="audio-correct" src="../assets/sound/correct.mp3"></audio>
+    <audio id="audio-error" src="../assets/sound/error.mp3"></audio>
+
+    <img width="100%" height="100%" src="images/bg.png" alt="">
+    <!-- 结束 -->
+    <div id="over-box">
+        <div id="panel">
+            <img id="panel-img" width="100%" src="../assets/images/scoring-correct.png" alt="">
+            <p id="over-time">用时：</p>
+            <p id="over-integral">得分：</p>
+            <a class="refresh" href="javascript:location.reload();">
+                <img width="100%" src="../assets/images/refresh.png" alt="">
+            </a>
+            <div id="mistakes">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="items">
+            <div class="item" data-index="1">
+                <div class="stone2"></div>
+            </div>
+            <div class="item" data-index="0">
+                <div class="stone1"></div>
+            </div>
+            <div class="item" data-index="3">
+                <div class="stone4"></div>
+            </div>
+            <div class="item" data-index="2">
+                <div class="stone3"></div>
+            </div>
+            <div class="item" data-index="5">
+                <div class="stone6"></div>
+            </div>
+            <div class="item" data-index="4">
+                <div class="stone5"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<img id="xiaoji" src="images/xiaoji.png"/>
+<div>
+    <div class="target1" style="top:21%;left: 29%;" data-index="0">
+        <div class="number"></div>
+        <div class="thing"></div>
+    </div>
+    <div class="target2" style="top:35%;left: 16%;" data-index="1">
+        <div class="number"></div>
+        <div class="thing"></div>
+    </div>
+    <div class="target3" style="top:35%;left:50%;" data-index="2">
+        <div class="number"></div>
+        <div class="thing"></div>
+    </div>
+    <div class="target4" style="top:53%;left:10.5%;" data-index="3">
+        <div class="number"></div>
+        <div class="thing"></div>
+    </div>
+    <div class="target5" style="top:53%;left:44%;" data-index="4">
+        <div class="number"></div>
+        <div class="thing"></div>
+    </div>
+    <div class="target6" style="top:53%;left:76%;" data-index="5">
+        <div class="number"></div>
+        <div class="thing"></div>
+    </div>
+</div>
+<div id="sound-box">
+</div>
+<!-- 计分板 -->
+<div class="information">
+    <span id="HP">3</span>
+    <span id="grade">0</span>
+    <span id="count-down"></span>
+</div>
+</div>
+<script src="../assets/js/gameAnswer.js"></script>
+<script src="../assets/js/jquery.js"></script>
+<script>
+    function getUrlParam(name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)') //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg)  //匹配目标参数
+        if (r != null) return decodeURIComponent(r[2])
+        return null //返回参数值
+    }
+
+    // 用时
+    var allTime = getUrlParam('time') || 60
+    var totalTime = getUrlParam('time') || 60
+    var text = getUrlParam('text')
+
+    var data = gameAnswer[text]
+    document.getElementById('count-down').innerHTML = totalTime
+</script>
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>连连看</title>
+    <link rel="stylesheet" href="../../../../lian-lina-kan/index.css">
+    <style>
+    #list-box {
+        width: 80%;
+        margin: 7vw auto;
+    }
+    </style>
+</head>
+<body>
+<div class="content">
+    <!-- 声音 -->
+    <audio id="audio-correct" src="../../../../assets/sound/correct.mp3"></audio>
+    <audio id="audio-error" src="../../../../assets/sound/error.mp3"></audio>
+
+    <img class="bg" width="100%" src="../../../../lian-lina-kan/images/bg.png" alt="">
+    <div id="rule">
+        <img src="../../../../lian-lina-kan/images/rule.png" alt="">
+        <button class="start-btn" onclick="start()"></button>
+    </div>
+    <!-- 结束 -->
+    <div id="over-box">
+        <div id="panel">
+            <img id="panel-img" width="100%" src="../../../../assets/images/scoring-correct.png" alt="">
+            <p id="over-time">用时：</p>
+            <p id="over-integral">得分：</p>
+            <a class="refresh" href="javascript:location.reload();">
+                <img width="100%" src="../../../../assets/images/refresh.png" alt="">
+            </a>
+            <div id="mistakes">
+
+            </div>
+        </div>
+    </div>
+    <!-- 计分板 -->
+    <div class="information">
+        <span id="HP">3</span>
+        <span id="grade">0</span>
+        <span id="count-down">40</span>
+    </div>
+    <ul id="list-box" style="display: none;"></ul>
+</div>
+<script src="../../../../assets/js/gameAnswer.js"></script>
+<script>
+function getUrlParam (name) {
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)') //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg)  //匹配目标参数
+    if (r != null) return decodeURIComponent(r[2])
+    return null //返回参数值
+}
+
+// 用时
+var totalTime = 40
+// 数据
+var text = getUrlParam('text')
+var data = gameAnswer[text]
+console.log(data)
+// var data = [
+//     {
+//         display1: './images/xiao.png', // 显示1
+//         display2: './images/mao.png', // 显示2
+//         num: 2, // 数量
+//         matching: 1 // 对应字段
+//     },
+//     {
+//         display1: './images/xiao.png',
+//         display2: './images/niao.png',
+//         num: 2,
+//         matching: 1
+//     },
+//     {
+//         display1: './images/ping.png',
+//         display2: './images/guo.png',
+//         num: 2,
+//         matching: 2
+//     },
+//     {
+//         display1: './images/zao.png',
+//         display2: './images/zi.png',
+//         num: 2,
+//         matching: 3
+//     },
+//     {
+//         display1: './images/xing.png',
+//         display2: './images/zi.png',
+//         num: 1,
+//         matching: 3
+//     },
+//     {
+//         display1: './images/ya.png',
+//         display2: './images/zi.png',
+//         num: 2,
+//         matching: 3
+//     },
+//     {
+//         display1: './images/tao.png',
+//         display2: './images/zi.png',
+//         num: 1,
+//         matching: 3
+//     },
+//     {
+//         display1: './images/huang.png',
+//         display2: './images/niu.png',
+//         num: 2,
+//         matching: 4
+//     }
+// ]
+</script>
+<script src="../../../../lian-lina-kan/index.js"></script>
+</body>
+</html>

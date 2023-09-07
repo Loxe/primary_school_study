@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>小学语文数学一年级上</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/start.css">
+</head>
+<body>
+<div class="hepan" data-img="hepan-beijing.png">
+    <div class="content">
+        <a href="assets/Chinese/Chinese.html" class="yuwen" data-img="yuwen-tongbian.png" remw="3.84" remh="5.27"></a>
+        <a href="dist/index.html" class="math" data-img="math-renjiao.png" remw="3.84" remh="5.27"></a>
+    </div>
+</div>
+</body>
+<script src="assets/Chinese/assets/js/jquery.min.js"></script>
+<script src="assets/Chinese/assets/js/rem.js"></script>
+<script src="assets/Chinese/assets/js/imgLoad.js"></script>
+<script src="assets/Chinese/assets/js/index.js"></script>
+<script src="assets/Chinese/assets/js/playAudio.js"></script>
+<script>
+
+$('ul li').on('click', function () {
+    var video = $(this).attr('data-video')
+    $('.video').attr('src', video)
+    $('.video').trigger('play')
+})
+
+$(window).on('load', function () {
+    var video = $('ul li:first-child').attr('data-video')
+    $('.video').attr('src', video)
+    playAudio()
+    localStorage.path = ''
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>语文（国家统编教材）一年级上</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/level3.css">
+    <link rel="stylesheet" href="../css/kantingduxie.css">
+</head>
+<body>
+<div id="level3" class="kantingduxie" data-file="common" data-img="background.jpg">
+    <div class="contain">
+        <div class="window" remw="10.4" remh="7.85">
+            <span class="bambooL" data-file="common" data-img="bambooL.png" remw="0.34" remh="7.61"></span>
+            <span class="bambooR" data-file="common" data-img="bambooR.png" remw="0.34" remh="7.61"></span>
+            <div class="screen trans" data-file="common" data-img="screen.png" remw="10.4" remh="7.85">
+                <div class="content"></div>
+                <ul class="pageStep"></ul>
+                <ul class="pageUpDown">
+                    <li class="nextPage" data-file="common" data-img="nextPage.png" remw="1.3" remh="0.8"></li>
+                    <li style="display: none" class="firstPage" data-file="common" data-img="prePage.png" remw="1.3" remh="0.8"></li>
+                </ul>
+            </div>
+            <div class="pinyinSelect">
+                <img class="kan menuBtn" menuBtn="kanyikan" audio-path="../audio/语文一音频/看一看.mp3"
+                     src="../images/kantingduxie/kanyikan.png"
+                     btn-img="../images/kantingduxie/kanyikan.png"
+                     btn-img-active="../images/kantingduxie/kanyikan-active.png"
+                     remw="2.07" remh="1.12">
+                <img class="ting menuBtn" menuBtn="tingyiting" audio-path="../audio/语文一音频/听一听.mp3"
+                     src="../images/kantingduxie/tingyiting.png"
+                     btn-img="../images/kantingduxie/tingyiting.png"
+                     btn-img-active="../images/kantingduxie/tingyiting-active.png"
+                     remw="2.07" remh="1.12">
+                <img class="du menuBtn" menuBtn="duyidu" audio-path="../audio/语文一音频/读一读.mp3"
+                     src="../images/kantingduxie/duyidu.png"
+                     btn-img="../images/kantingduxie/duyidu.png"
+                     btn-img-active="../images/kantingduxie/duyidu-active.png"
+                     remw="2.07" remh="1.12">
+                <img class="xie menuBtn" menuBtn="xieyixie" audio-path="../audio/语文一音频/写一写.mp3"
+                     src="../images/kantingduxie/xieyixie.png"
+                     btn-img="../images/kantingduxie/xieyixie.png"
+                     btn-img-active="../images/kantingduxie/xieyixie-active.png"
+                     remw="2.07" remh="1.12">
+            </div>
+        </div>
+    </div>
+    <span class="panda nature" data-file="common" data-img="panda.gif" remw="3.18" remh="2.55"></span>
+    <img id="leaf" class="leaf nature" src="../images/common/leaf/0.png"/>
+    <span class="bamboo nature" data-file="common" data-img="bamboo.png"></span>
+    <span audio-path="../audio/语文一音频/返回.mp3" class="return nature" data-file="common" data-img="back_text.png"
+          remw="1.89"
+          remh="1.63"></span>
+    <audio class="pangBaiAudio" src=""></audio>
+    <audio class="forContentVideo" src=""></audio>
+</div>
+<script src="../js/Browser.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/imgLoad.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/config.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/loopImg.js"></script>
+<script src="../js/playAudio.js"></script>
+
+<script>
+var lesson = ''
+var index = 0
+var currentBtn = 'tingyiting'
+var pageNumber = 1
+var pageSize = 0
+$(window).on('load', function () {
+    saveChildPath()
+    setContent(currentBtn)
+    loopImg('leaf','../images/common/leaf','png',0,41,8000)
+    //所有按钮的音频绑定
+    playAudio()
+})
+
+$('.return').on('click', function () {
+    window.history.back()
+    return false
+})
+
+function getLesson () {
+    var lessonId = getUrlParam('lessonId')
+    menu.map(function (item) {
+        if (item.name == '汉语拼音') {
+            item.learn.map(function (page) {
+                page.map(function (s) {
+                    if (s.lessonId == lessonId) {
+                        lesson = s.lesson
+                    }
+                })
+            })
+        }
+    })
+}
+
+function setContent (key) {
+    var curMenuDom = $('[menuBtn="' + key + '"]')
+    var btnActive = curMenuDom.attr('btn-img-active')
+    curMenuDom.attr('src', btnActive)
+    curMenuDom.siblings().map(function (key, item) {
+        var btnImg = $(item).attr('btn-img')
+        $(item).attr('src', btnImg)
+    })
+    getLesson()
+    $('.content').html()
+    var pages = lesson[key]
+    $('.pageStep').html('')
+    $('.content').html('')
+    pageSize = pages.length
+    buildPage()
+    for (var i = 0; i < pages.length; i++) {
+        var page = pages[i]
+        var content = page.content
+        var html = ''
+        switch (page.type) {
+            case 'full':
+                html = render.renderFull(content, page.crossIntr)
+                break
+            case 'controlFull':
+                html = render.rendercontrolFull(content)
+                break
+            case 'stillControlFull':
+                html = render.renderstillControlFull(content)
+                break
+            case 'selectControlFull':
+                html = render.renderselectControlFull(content)
+                break
+            case 'row':
+                html = render.renderRow(content, page.click)
+                break
+            case 'bigRow':
+                html = render.renderbigRow(content)
+                break
+            case 'block':
+                html = render.renderBlock(content)
+                break
+            case 'blockGroup':
+                html = render.renderblockGroup(content)
+                break
+            case 'blockLine':
+                html = render.renderblockLine(content)
+                break
+            case 'splitBlock':
+                html = render.rendersplitBlock(content)
+                break
+            case 'bottom':
+                html = render.renderBottom(content)
+                break
+            case 'bottomImg':
+                html = render.renderbottomImg(content)
+                break
+            case 'bottomFlower':
+                html = render.renderbottomFlower(content)
+                break
+            case 'bottomShot':
+                html = render.renderbottomShot(content)
+                break
+            case 'bottomLine':
+                html = render.renderBottomLine(content)
+                break
+            case 'doubleLine':
+                html = render.renderdoubleLine(content, page.count)
+                break
+            case 'intrFull':
+                html = render.renderintrFull(content)
+                break
+        }
+        $('.content .page:nth-child(' + (i + 1) + ')').html(html)
+        $('.content .page:nth-child(' + (i + 1) + ') .' + page.type).attr('data-pangbai-audio', page.audio)
+        $('.intrFull video').off('ended')
+        $('.intrFull video').on('ended', function () {
+            $('.clickItem').show()
+        })
+        $('video').off('timeupdate')
+        $('video').on('timeupdate', function () {
+            if ($(this)[0].currentTime > 0) {
+                $(this)[0].muted = false
+            }
+        })
+    }
+    remToPx()
+    imgLoad()
+    showPage(1)
+}
+
+function showPage (pgn) {
+    pageNumber = pgn
+    remToPx()
+    var page = $('.content .page:nth-child(' + pageNumber + ')')
+    page.addClass('show').siblings().removeClass('show')
+    stopPlay()
+    initBeforePangBai()
+    // 旁白
+    var hasPangBai = page.children().attr('data-pangbai-audio')
+    if (hasPangBai) {
+        $('.pangBaiAudio').attr('src', hasPangBai)
+        $('.pangBaiAudio').trigger('play')
+    } else {
+        initPageOption()
+    }
+}
+
+function initBeforePangBai () {
+    var page = $('.content .page:nth-child(' + pageNumber + ')')
+    var type = page.children().attr('class')
+    var children = page.children()
+    if (type === 'controlFull') {
+        children.find('.btnImg').show()
+        children.find('.img').show()
+
+        // children.find('video').trigger('pause')
+    }
+    if (type === 'bottom') {
+        children.find('video').attr('src', '')
+    }
+    if (type === 'row') {
+        $('.click').siblings().css('opacity', '0')
+    }
+    if (type === 'stillControlFull') {
+        var video = $('.stillControlFull img').attr('data-video')
+        $('.stillControlFull .video').attr('src', video)
+    }
+}
+
+function initPageOption () {
+    var page = $('.content .page:nth-child(' + pageNumber + ')')
+    var type = page.children().attr('class')
+    var children = page.children()
+    //每个type自己的初始化
+    if (type === 'full') {
+        var src = children.find('video').attr('data-src')
+        children.find('video').attr('src', src)
+        children.find('video').attr('src', children.find('video').attr('data-video'))
+        children.find('video').trigger('play')
+    }
+    if (type === 'intrFull') {
+        children.find('video').attr('src', children.find('video').attr('data-video'))
+        children.find('video').trigger('play')
+    }
+    if (type === 'bigRow') {
+        children.find('.btnImg').show()
+        children.find('.img').show()
+        children.find('video').trigger('pause')
+    }
+}
+
+function buildPage () {
+    // 生成分页
+    if (pageSize > 1) {
+        $('.pageUpDown li:first-child').show()
+        $('.pageUpDown li:last-child').hide()
+        if (currentBtn != 'xieyixie') {
+            $('.pageUpDown').hide()
+            $('.pageStep').show()
+            // 生成对应的内容框
+            $('.pageStep').html('')
+            var html = ''
+            for (var i = 0; i < pageSize; i++) {
+                if (i == 0) {
+                    html += '<li class="up" remw="0.76" remh="0.7"></li>'
+                } else {
+                    html += '<li remw="0.76" remh="0.7"></li>'
+                }
+            }
+            $('.pageStep').html(html)
+        } else {
+            $('.pageStep').hide()
+            $('.pageUpDown').show()
+        }
+    } else {
+        $('.pageUpDown').hide()
+        $('.pageStep').hide()
+    }
+
+    // 生成对应的内容框
+    $('.content').html('')
+    var html = ''
+    for (var i = 0; i < pageSize; i++) {
+        html += '<div class="page"></div>'
+    }
+    $('.content').html(html)
+}
+
+var render = {
+    renderFull: function (content, crossIntr) {
+        var html = '<div class="full">'
+        content.map(function (item) {
+            if (item.img) {
+                html += '<img src="' + item.img + '" alt="">'
+            } else if (item.video) {
+                if (crossIntr) {
+                    html += '<video class="video" muted data-video="' + item.video + '"></video>'
+                } else {
+                    html += '<video class="video" muted controls data-video="' + item.video + '"></video>'
+                }
+            }
+        })
+        html += '</div>'
+        return html
+    },
+    rendercontrolFull: function (content) {
+        var html = ' <div class="controlFull">'
+        content.map(function (item) {
+            html += '<img src="' + item.img + '" class="img center">'
+            html += '<img data-video="' + item.video + '" src="' + item.btnImg + '" class="btnImg" remw="1.04" remh="1.29">'
+            html += '<video src="" class="video center"></video>'
+            html += ' </div>'
+        })
+        return html
+    },
+    renderstillControlFull: function (content) {
+        var html = ' <div class="stillControlFull">'
+        content.map(function (item) {
+            html += '<img src="' + item.btnImg + '" data-video="' + item.video + '" class="stillImg" remw="1.71" remh="0.95">'
+            html += '<video src="" class="video"></video>'
+            html += ' </div>'
+        })
+        return html
+    },
+    renderselectControlFull: function (content) {
+        var html = ' <div class="selectControlFull" data-img="raokouling-beijing.jpg">'
+        content.map(function (item, index) {
+            if (index == 0) {
+                html += '<video src="' + item.video2 + '" class="video"></video>'
+            }
+            html += '<img src="' + item.slowImg + '" data-video="' + item.video1 + '" class="selectImg slowImg" remw="1.71" remh="0.95">'
+            html += '<img src="' + item.middleImg + '" data-video="' + item.video2 + '" class="selectImg middleImg" remw="1.71" remh="0.95">'
+            html += '<img src="' + item.fastImg + '" data-video="' + item.video3 + '" class="selectImg fastImg" remw="1.71" remh="0.95">'
+            html += ' </div>'
+        })
+        return html
+    },
+    renderRow: function (content, click) {
+        var html = '<div class="row">'
+        html += '<audio class="audio" src=""></audio>'
+        html += '    <ul class="rowNumber' + content.length + '">'
+        content.map(function (item) {
+            html += '<li>'
+            if (click) {
+                if (item.img2) {
+                    if (item.smallSize) {
+                        html += '<img src="' + item.img1 + '" class="img1 col3" data-audio="' + item.audio + '">'
+                        html += '<img src="' + item.img2 + '" class="img2 click ' + item.smallSize + '" data-audio="' + item.audio + '">'
+                    } else {
+                        html += '<img src="' + item.img1 + '" class="img1 col3" data-audio="' + item.audio + '">'
+                        html += '<img src="' + item.img2 + '" class="img2 click" data-audio="' + item.audio + '">'
+                    }
+                } else {
+                    if (item.smallSize) {
+                        html += '<img src="' + item.img1 + '" class="img1 ' + item.smallSize + '" data-audio="' + item.audio + '">'
+                    } else {
+                        html += '<img src="' + item.img1 + '" class="img1" data-audio="' + item.audio + '">'
+                    }
+                }
+            } else {
+                if (item.img2) {
+                    if (item.smallSize) {
+                        html += '<img src="' + item.img1 + '" class="click img1 col3" data-audio="' + item.audio + '">'
+                        html += '<img src="' + item.img2 + '" class="img2 ' + item.smallSize + '" data-audio="' + item.audio + '">'
+                    } else {
+                        html += '<img src="' + item.img1 + '" class="click img1 col3" data-audio="' + item.audio + '">'
+                        html += '<img src="' + item.img2 + '" class="img2" data-audio="' + item.audio + '">'
+                    }
+                } else {
+                    if (item.smallSize) {
+                        html += '<img src="' + item.img1 + '" class="click img1 ' + item.smallSize + '" data-audio="' + item.audio + '">'
+                    } else {
+                        html += '<img src="' + item.img1 + '" class="click img1" data-audio="' + item.audio + '">'
+                    }
+                }
+            }
+            if (item.video1) {
+                html += '<video class="video" data-video="' + item.video1 + '"></video>'
+            }
+            if (item.video2) {
+                html += '<video class="video" data-video="' + item.video2 + '"></video>'
+            }
+            html += '</li>'
+        })
+        html += '    </ul>'
+        html += '</div>'
+        return html
+    },
+    renderbigRow: function (content) {
+        var html = '<div class="bigRow" data-img="beijing.png" remw="9.85" remh="7.39">'
+        html += '<audio class="audio" src=""></audio>'
+        html += '<ul>'
+        content.map(function (item) {
+            html += '<li>'
+            html += '    <img src="' + item.img + '" class="pinyin ' + '" data-audio="' + item.audio + '"/>'
+            html += '</li>'
+        })
+        html += '    </ul>'
+        html += '</div>'
+        return html
+    },
+    renderBlock: function (content) {
+        var html = '<div class="block" data-img="beijing.png" remw="9.85" remh="7.39">'
+        html += '<audio class="audio" src=""></audio>'
+        html += '<p class="textContent">'
+        content.map(function (item) {
+            if (item.audio) {
+                html += '<img class="pinyin" src="' + item.img1 + '" data-audio="' + item.audio + '">'
+            }
+        })
+        html += '    </p>'
+        html += '</div>'
+        return html
+    },
+    renderblockLine: function (content) {
+        var html = '<div class="blockLine">'
+        html += '<audio class="audio" src=""></audio>'
+        html += '<div class="topLine" data-img="crossSmall.png" remw="5.32" remh="1.7">'
+        html += '<span class="y" data-img="Y.png" remw="1" remh="1"></span>'
+        html += '<audio class="yAudio" src="../../assets/video/7.读一读/2-读一读-汉语拼音二-iuvyw/2.栏目2/音频/2-yi-1.mp3"></audio>'
+        html += '<span class="w" data-img="W.png" remw="1" remh="1"></span>'
+        html += '<audio class="wAudio" src="../../assets/video/7.读一读/2-读一读-汉语拼音二-iuvyw/2.栏目2/音频/4-wu-1.mp3"  ></audio>'
+        html += '</div>'
+        html += '<p class="textContent">'
+        content.map(function (item) {
+            html += '<img class="pinyin" src="' + item.img + '" data-audio="' + item.audio + '">'
+        })
+        html += '    </p>'
+        html += '</div>'
+        return html
+    },
+    renderblockGroup: function (content) {
+        var html = '<div class="blockGroup">'
+        html += '<audio class="audio" src=""></audio>'
+        html += '<div class="dan group">'
+        content.map(function (item, index) {
+            if (index < 12) {
+                html += '<img class="pinyin" src="' + item.img1 + '" data-audio="' + item.audio + '">'
+            }
+        })
+        html += '</div>'
+        html += '<div class="shuang group">'
+        content.map(function (item, index) { 
+            if (index >= 12 & index < 24) {
+                html += '<img class="pinyin" src="' + item.img1 + '" data-audio="' + item.audio + '">'
+            }
+        })
+        html += '</div>'
+        return html
+    },
+    rendersplitBlock: function (content) {
+        var html = '<div class="splitBlock" data-img="beijing.png" remw="9.85" remh="7.39">'
+        html += '<audio class="audio" src=""></audio>'
+        html += '    <ul>'
+        content.map(function (item) {
+            html += '<li>'
+            html += '<img class="pinyin img1" src="' + item.img1 + '" data-audio="' + item.audio1 + '">'
+            html += '<img class="pinyin splitImg" src="' + item.splitImg + '">'
+            html += '<img class="pinyin img2" src="' + item.img2 + '" data-audio="' + item.audio2 + '">'
+            html += '</li>'
+        })
+        html += '    </ul>'
+        return html
+    },
+    renderBottom: function (content) {
+        var html = '   <div class="bottom">'
+        html += '<video class="video" src=""></video>'
+        html += '<p class="textContent">'
+        content.map(function (item) {
+            html += '<img class="pinyin" src="' + item.img + '" data-video="' + item.video + '">'
+        })
+        html += '    </p>'
+        html += '</div>'
+        return html
+    },
+    renderbottomImg: function (content) {
+        var html = '   <div class="bottomImg">'
+        html += '<audio class="audio" src=""></audio>'
+        html += '<p class="imgContent">'
+        content.map(function (item) {
+            html += '<img class="img2" src="' + item.img2 + '">'
+        })
+        html += '    </p>'
+        html += '<p class="textContent">'
+        content.map(function (item) {
+            html += '<img class="pinyin" src="' + item.img + '" data-audio="' + item.audio + '">'
+        })
+        html += '    </p>'
+        html += '</div>'
+        return html
+    },
+    renderbottomFlower: function (content) {
+        var html = '<div class="bottomFlower">'
+        html += '<audio class="bottomFlowerAudio" src=""></audio>'
+        html += '<video class="video" src=""></video>'
+        html += '<div class="flowerGroup">'
+        content.map(function (item) {
+            if (item.flower.length == 6) {
+                html += '<div data-img="flower6.png" remw="2.415" remh="2.58" class="flower flower' + item.flower.length + '">'
+            }
+            if (item.flower.length == 7) {
+                html += '<div data-img="flower7.png" remw="2.55" remh="2.505" class="flower flower' + item.flower.length + '">'
+            }
+            html += '<img  src="' + item.img + '" data-audio="' + item.audio + '" class="pinyin item center"/>'
+            item.flower.map(function (sitem) {
+                html += '<img src="' + sitem.img + '" data-video="' + sitem.video + '" class="pinyin item around"/>'
+            })
+            html += '</div>'
+        })
+        html += '</div>'
+        html += '</div>'
+        return html
+    },
+    renderbottomShot: function (content) {
+        var html = '<div class="bottomShot">'
+        html += '<audio class="bottomShotAudio" src=""></audio>'
+        html += '<video class="video" src=""></video>'
+        html += '<div class="shotGroup">'
+        content.map(function (item) {
+            if (item.shot.length == 6) {
+                html += '<div data-img="Shot6.png" remw="4.35" remh="2.57" class="shot shot' + item.shot.length + '">'
+            }
+            if (item.shot.length == 5) {
+                html += '<div data-img="Shot5.png" remw="4.35" remh="2.57" class="shot shot' + item.shot.length + '">'
+            }
+            html += '<img  src="' + item.img + '" data-audio="' + item.audio + '" class="pinyin item center"/>'
+            item.shot.map(function (sitem) {
+                html += '<img src="' + sitem.img + '" data-video="' + sitem.video + '" class="pinyin item around"/>'
+            })
+            html += '</div>'
+        })
+        html += '</div>'
+        html += '</div>'
+        return html
+    },
+    renderBottomLine: function (content) {
+        var html = '  <div class="bottomLine" data-img="beijingCross.png" remw="9.85" remh="7.39">'
+        html += '<video class="video" src=""></video>'
+        html += '<p >'
+        content.map(function (item) {
+            html += '<img class="pinyin" src="' + item.img + '" data-video="' + item.video + '">'
+        })
+        html += '</p>'
+        html += '</div>'
+        return html
+    },
+    renderdoubleLine: function (content, count) {
+        var html = '  <div class="doubleLine" data-img="beijing.png" remw="9.85" remh="7.39">'
+        html += '<p class="crossBig" data-img="crossBig.png" remw="10" remh="3">'
+        html += '<audio class="audio" src=""></audio>'
+        if (count == 'ciyuPinyin') {
+            html += '<img class="gif ciyuPinyinGif" src="">'
+        }else {
+            html += '<img class="gif" src="">'
+        }
+        html += '</p>'
+        html += '<p class="crossSmall" data-img="crossSmall.png" remw="8" remh="1.7">'
+
+        content.map(function (item) {
+            if (count == '2') {
+                if (content.length == 5) {
+                    html += '<img class="pinyin count2Wuge" src="' + item.img1 + '"  data-gif="' + item.img2 + '" data-audio="' + item.audio + '">'
+                } else {
+                    html += '<img class="pinyin count2Sange" src="' + item.img1 + '"  data-gif="' + item.img2 + '" data-audio="' + item.audio + '">'
+                }
+            } else if (count == '3') {
+                html += '<img class="pinyin count3" src="' + item.img1 + '"  data-gif="' + item.img2 + '" data-audio="' + item.audio + '">'
+            } else if(count == 'long'){
+                html += '<img class="pinyin long" src="' + item.img1 + '"  data-gif="' + item.img2 + '" data-audio="' + item.audio + '">'
+            } else if (count == 'ciyuPinyin') {
+                html += '<img class="pinyin ciyuPinyin" src="' + item.img1 + '"  data-gif="' + item.img2 + '" data-audio="' + item.audio + '">'
+            } else {
+                html += '<img class="pinyin" src="' + item.img1 + '"  data-gif="' + item.img2 + '" data-audio="' + item.audio + '">'
+            }
+        })
+        html += '</p>'
+        html += '</div>'
+        return html
+    },
+    renderintrFull: function (content) {
+        var html = '  <div class="intrFull">'
+        html += '<audio class="audio" src=""></audio>'
+        content.map(function (item) {
+            html += '<video class="video" data-video="' + item.video + '"></video>'
+            item.clickItem.map(function (sitem) {
+                html += '<div class="clickItem" style="'
+                html += 'width:' + sitem.width + ';'
+                html += 'height:' + sitem.height + ';'
+                html += 'top:' + sitem.top + ';'
+                html += 'left:' + sitem.left + ';"'
+                html += 'audio="' + sitem.audio + '">'
+                html += '</div>'
+            })
+        })
+        html += '</div>'
+        return html
+    }
+}
+
+function playPageVideo (video) {
+    var curPageVideoDom = $('.content .page:nth-child(' + pageNumber + ') .video')
+    curPageVideoDom.attr('src', video)
+    curPageVideoDom.trigger('play')
+}
+
+function playPageAudio (audio) {
+    var curPageAudioDom = $('.content .page:nth-child(' + pageNumber + ') .audio')
+    if (curPageAudioDom[0]) {
+        curPageAudioDom.attr('src', audio)
+        curPageAudioDom.trigger('play')
+    } else {
+        $('.forContentVideo').attr('src', audio)
+        $('.forContentVideo').trigger('play')
+    }
+}
+
+function stopPlay () {
+    $('.pangBaiAudio').trigger('pause')
+    $('.forContentVideo').trigger('pause')
+    // 停止音频。停止gif,停止视频
+    if ($('.gif')) {
+        $('.gif').attr('src', '')
+    }
+    $('video').trigger('pause')
+    $('audio:not(.bgAudio)').attr('src', '')
+    $('audio:not(.bgAudio)').trigger('pause')
+}
+
+$('.menuBtn').on('click', function () {
+   
+    stopPlay()
+    $('video').trigger('pause')
+    currentBtn = $(this).attr('menuBtn')
+    $('.pageStep').html('')
+    setContent(currentBtn)
+    imgLoad()
+    $('video').attr({disablePictureInPicture:'disablePictureInPicture'});
+})
+$('.content').on('click', '.row video', function () {
+    stopPlay()
+    $(this).attr('src', $(this).attr('data-video'))
+    $(this).trigger('play')
+})
+$('.pageStep').on('click', 'li', function () {
+    stopPlay()
+    var index = $('.pageStep li').index($(this))
+    $(this).addClass('up').siblings().removeClass('up')
+    pageNumber = index + 1
+    showPage(pageNumber)
+})
+$('.pageUpDown').on('click', 'li:first-child', function () {
+    stopPlay()
+    pageNumber++
+    if (pageNumber > 1) {
+        $(this).next().show()
+    }
+    if (pageNumber == pageSize) {
+        $(this).hide()
+    }
+    showPage(pageNumber)
+})
+$('.pageUpDown').on('click', 'li:last-child', function () {
+    stopPlay()
+    pageNumber--
+    if (pageNumber == pageSize) {
+        $(this).prev().hide()
+    }
+    if (pageNumber == 1) {
+        $(this).prev().show()
+        $(this).hide()
+    }
+    showPage(pageNumber)
+})
+
+//controlFull
+$('.content').on('click', '.controlFull .btnImg', function () {
+    stopPlay()
+    $('.img').hide()
+    $('.btnImg').hide()
+    var video = $(this).attr('data-video')
+    playPageVideo(video)
+})
+//stillControlFull
+$('.content').on('click', '.stillControlFull .stillImg', function () {
+    stopPlay()
+    var video = $(this).attr('data-video')
+    playPageVideo(video)
+})
+//selectControlFull
+$('.content').on('click', '.selectControlFull .selectImg', function () {
+    stopPlay()
+    var video = $(this).attr('data-video')
+    playPageVideo(video)
+})
+//row
+$('.content').on('click', '.row .click', function () {
+    stopPlay()
+    $(this).siblings().css('opacity', '1')
+    var videos = $(this).siblings('video')
+    for (i = 0; i < videos.length; i++) {
+        var video = videos[i]
+        $(video).attr('src', $(video).attr('data-video'))
+    }
+    if ($(this).siblings().length > 1) {
+        $(this).next().trigger('play')
+    }
+    var audio = $(this).attr('data-audio')
+    playPageAudio(audio)
+})
+
+//bigRow
+$('.content').on('click', '.bigRow .pinyin', function () {
+    stopPlay()
+    var audio = $(this).attr('data-audio')
+    playPageAudio(audio)
+})
+//bottom
+$('.content').on('click', '.bottom .pinyin', function () {
+    stopPlay()
+    var video = $(this).attr('data-video')
+    playPageVideo(video)
+})
+//bottomImg
+$('.content').on('click', '.bottomImg .pinyin', function () {
+    stopPlay()
+    var audio = $(this).attr('data-audio')
+    playPageAudio(audio)
+})
+//bottomLine
+$('.content').on('click', '.bottomLine .pinyin', function () {
+    stopPlay()
+    var video = $(this).attr('data-video')
+    playPageVideo(video)
+})
+//block
+$('.content').on('click', '.block .pinyin', function () {
+    stopPlay()
+    var audio = $(this).attr('data-audio')
+    playPageAudio(audio)
+})
+//blockGroup
+$('.content').on('click', '.blockGroup .pinyin', function () {
+    stopPlay()
+    var audio = $(this).attr('data-audio')
+    playPageAudio(audio)
+})
+//blockLine
+$('.content').on('click', '.blockLine .pinyin', function () {
+    stopPlay()
+    var audio = $(this).attr('data-audio')
+    playPageAudio(audio)
+})
+
+
+
+// $('.content').on('click', '.blockLine .topLine .y', function () {
+//     stopPlay()
+//     $('.yAudio').trigger('play')
+// })
+
+
+// $('.content').on('click', '.blockLine .topLine .w', function () {
+//     stopPlay()
+//     $('.wAudio').trigger('play')
+// })
+
+$('.content').on('click', '.blockLine .topLine .y', function () {
+    stopPlay()
+    var audio= new Audio("../../assets/video/7.读一读/2-读一读-汉语拼音二-iuvyw/2.栏目2/音频/2-yi-1.mp3");
+    audio.play();//播放
+})
+
+$('.content').on('click', '.blockLine .topLine .w', function () {
+    stopPlay()
+    var audio= new Audio("../../assets/video/7.读一读/2-读一读-汉语拼音二-iuvyw/2.栏目2/音频/4-wu-1.mp3");
+    audio.play();//播放
+})
+
+
+//splitBlock
+$('.content').on('click', '.splitBlock .pinyin', function () {
+    stopPlay()
+    var audio = $(this).attr('data-audio')
+})
+
+//doubleLine
+$('.content').on('click', '.doubleLine .pinyin', function () {
+    stopPlay()
+    $('.audio').attr('src', '')
+    $('.gif').attr('src', '')
+    var that = this
+    setTimeout(function () {
+        var gif = $(that).attr('data-gif')
+        $('.gif').attr('src', gif)
+        var audio = $(that).attr('data-audio')
+        playPageAudio(audio)
+    }, 100)
+})
+//bottomFlower
+$('.content').on('click', '.bottomFlower .center', function () {
+    stopPlay()
+    var audio=$(this).attr('data-audio')
+    $('.bottomFlowerAudio').attr('src',audio)
+    $('.bottomFlowerAudio').trigger('play')
+})
+$('.content').on('click', '.bottomFlower .around', function () {
+    stopPlay()
+    playPageVideo($(this).attr('data-video'))
+})
+//bottomShot
+$('.content').on('click', '.bottomShot .center', function () {
+    stopPlay()
+    var audio=$(this).attr('data-audio')
+    $('.bottomShotAudio').attr('src',audio)
+    $('.bottomShotAudio').trigger('play')
+})
+$('.content').on('click', '.bottomShot .around', function () {
+    stopPlay()
+    playPageVideo($(this).attr('data-video'))
+})
+
+//intrFull
+$('.content').on('click', '.intrFull .clickItem', function () {
+    var audio = $(this).attr('audio')
+    playPageAudio(audio)
+})
+// 旁白
+$('.pangBaiAudio').on('ended', function () {
+    stopPlay()
+    initPageOption()
+})
+</script>
+</body>
+</html>

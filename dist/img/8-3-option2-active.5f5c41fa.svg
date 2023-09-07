@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="223.898" height="226.84" viewBox="0 0 223.898 226.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffeec2;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #db9469;
+      }
+
+      .cls-3 {
+        fill: #b86f42;
+      }
+
+      .cls-4 {
+        fill: #ff6969;
+      }
+
+      .cls-5 {
+        fill: #fff;
+        font-size: 13.2px;
+        font-family: MicrosoftYaHei-Bold, Microsoft YaHei;
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        stroke: none;
+      }
+
+      .cls-7 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="组_3507" data-name="组 3507" transform="translate(-172.728 -1487.383)">
+    <g id="矩形_1182" data-name="矩形 1182" class="cls-1" transform="translate(182.728 1497.383)">
+      <rect class="cls-6" width="203.898" height="206.84" rx="13.181"/>
+      <rect class="cls-7" x="-5" y="-5" width="213.898" height="216.84" rx="18.181"/>
+    </g>
+    <g id="组_3506" data-name="组 3506">
+      <rect id="矩形_1183" data-name="矩形 1183" class="cls-2" width="131.142" height="24.173" rx="3.506" transform="translate(219.105 1659.217)"/>
+      <rect id="矩形_1184" data-name="矩形 1184" class="cls-3" width="6.842" height="122.393" transform="translate(262.665 1536.825)"/>
+      <rect id="矩形_1185" data-name="矩形 1185" class="cls-3" width="6.842" height="122.393" transform="translate(300.469 1536.825)"/>
+      <rect id="矩形_1186" data-name="矩形 1186" class="cls-2" width="131.142" height="10.606" rx="4.755" transform="translate(219.105 1526.219)"/>
+      <rect id="矩形_1187" data-name="矩形 1187" class="cls-4" width="24.376" height="13.599" rx="6.8" transform="translate(292.087 1645.618)"/>
+      <rect id="矩形_1188" data-name="矩形 1188" class="cls-4" width="24.376" height="13.599" rx="6.8" transform="translate(253.898 1645.618)"/>
+      <text id="个位" class="cls-5" transform="translate(290.674 1675.147)"><tspan x="0" y="0">个位</tspan></text>
+      <text id="十位" class="cls-5" transform="translate(253.898 1675.147)"><tspan x="0" y="0">十位</tspan></text>
+    </g>
+  </g>
+</svg>

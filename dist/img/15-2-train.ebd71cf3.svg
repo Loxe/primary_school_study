@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="855.11" height="315.883" viewBox="0 0 855.11 315.883">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fc9210;
+      }
+
+      .cls-2 {
+        fill: #2c1e55;
+      }
+
+      .cls-3 {
+        fill: #4f3d72;
+      }
+
+      .cls-4 {
+        fill: #5d4876;
+      }
+
+      .cls-5 {
+        fill: #20052a;
+      }
+
+      .cls-6 {
+        fill: #fff8ef;
+      }
+    </style>
+  </defs>
+  <g id="图层_1-2" data-name="图层 1-2" transform="translate(-57.275 -280.789)">
+    <rect id="矩形_3081" data-name="矩形 3081" class="cls-1" width="14.912" height="54.208" rx="6.507" transform="translate(122.683 335.829)"/>
+    <rect id="矩形_3082" data-name="矩形 3082" class="cls-2" width="49.856" height="102.891" transform="translate(108.304 449.259)"/>
+    <rect id="矩形_3083" data-name="矩形 3083" class="cls-3" width="49.856" height="45.803" transform="translate(108.304 403.456)"/>
+    <path id="路径_15046" data-name="路径 15046" class="cls-4" d="M93.819,382.23H158.16v21.333H93.819a6.636,6.636,0,0,1-6.635-6.635h0v-8.085A6.635,6.635,0,0,1,93.819,382.23Z"/>
+    <rect id="矩形_3084" data-name="矩形 3084" class="cls-3" width="287.638" height="22.101" transform="translate(70.054 545.067)"/>
+    <rect id="矩形_3085" data-name="矩形 3085" class="cls-2" width="300.416" height="29.483" transform="translate(57.275 567.19)"/>
+    <rect id="矩形_3086" data-name="矩形 3086" class="cls-2" width="520.88" height="26.88" transform="translate(391.505 567.19)"/>
+    <rect id="矩形_3087" data-name="矩形 3087" class="cls-5" width="33.813" height="19.072" transform="translate(357.691 572.971)"/>
+    <rect id="矩形_3088" data-name="矩形 3088" class="cls-1" width="22.976" height="72.597" transform="translate(85.328 472.47)"/>
+    <circle id="椭圆_2829" data-name="椭圆 2829" class="cls-6" cx="9.216" cy="9.216" r="9.216" transform="translate(158.139 280.789)"/>
+    <circle id="椭圆_2830" data-name="椭圆 2830" class="cls-6" cx="5.461" cy="5.461" r="5.461" transform="translate(132.134 318.976)"/>
+    <circle id="椭圆_2831" data-name="椭圆 2831" class="cls-6" cx="7.509" cy="7.509" r="7.509" transform="translate(138.256 298.517)"/>
+  </g>
+</svg>

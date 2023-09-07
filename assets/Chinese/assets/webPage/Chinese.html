@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>语文（国家统编教材）一年级上</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/level3.css">
+</head>
+<body>
+<div class="wrapper">
+    <img id="Chinese-beijing" src="../images/home/Chinese-beijing/1.png"/>
+    <span id="sound" remw="0.58" remh="0.5"></span>
+    <img src="../images/home/dragonfly.gif" class="ani_div" id="dragonfly">
+    <div id="home">
+        <div id="titles" class="">
+            <div class="swiper-container">
+                <div id="list" class="swiper-wrapper"></div>
+            </div>
+            <div class="title_btn title_prev" remw="0.52" remh="0.52" data-file="home" data-img="jt.png"></div>
+            <div class="title_btn title_next" remw="0.52" remh="0.52" data-file="home" data-img="jt.png"></div>
+        </div>
+        <span audio-path="../audio/语文一音频/使用说明.mp3" class="home_tit home_tit1"><img
+                src="../images/home/text1.png"></span>
+        <span audio-path="../audio/语文一音频/编著与出版.mp3" class="home_tit home_tit2"><img
+                src="../images/home/text2.png"></span>
+        <span audio-path="../audio/语文一音频/退出.mp3" class="home_tit home_tit3 quit"><img src="../images/home/quit.png"></span>
+        <div class="home_btns">
+            <span audio-path="../audio/语文一音频/menu/识字一.mp3" data-name="识字1" remh="0.62">
+                <i class="fl" remw="0.92" remh="0.8"></i>
+            </span>
+            <span audio-path="../audio/语文一音频/menu/汉语拼音.mp3" data-name="汉语拼音" remh="0.62">
+               <i class="fl" remw="0.92" remh="0.8"></i>
+            </span>
+            <span audio-path="../audio/语文一音频/menu/课文一.mp3" data-name="课文1" remh="0.62">
+              <i class="fl" remw="0.92" remh="0.8"></i>
+            </span>
+            <span audio-path="../audio/语文一音频/menu/识字二.mp3" data-name="识字2" remh="0.62">
+              <i class="fl" remw="0.92" remh="0.8"></i>
+            </span>
+            <span audio-path="../audio/语文一音频/menu/课文二.mp3" data-name="课文2" remh="0.62">
+                <i class="fl" remw="0.92" remh="0.8"></i>
+            </span>
+            <span audio-path="../audio/语文一音频/menu/读写姿势.mp3" data-name="读写姿势" remh="0.62">
+              <i class="fl" remw="0.92" remh="0.8"></i>
+            </span>
+            <img src="../images/home/btns.png" remw="12.18" remh="0.62">
+        </div>
+    </div>
+    <audio src="../audio/bg.mp3" loop muted class="bgAudio"></audio>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/loopImg.js"></script>
+<script src="../js/imgLoad.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/config.js"></script>
+<script src="../js/playAudio.js"></script>
+<script>
+
+var curMenu = '识字1'
+var slider = null
+var itemLength = ''
+
+$('#sound').on('click', function () {
+    $(this).toggleClass('nosound')
+    if ($(this).hasClass('nosound')) {
+        $('.bgAudio').trigger('pause')
+        changeURLParam('sound', false)
+    } else {
+        $('.bgAudio').trigger('play')
+        changeURLParam('sound', true)
+    }
+})
+$('.quit').on('click', function () {
+    window.history.back()
+    return false
+})
+
+function loadList () {
+    var html = ''
+    menu.forEach(function (item) {
+        if (item.name == curMenu) {
+            itemLength = item.learn.length
+            item.learn.forEach(function (list) {
+                html += '<div class="swiper-slide swiper-no-swiping"><div class="title_list" remw="12.19" remh="4.5">'
+                list.forEach(function (li) {
+                    if (curMenu != '汉语拼音') {
+                        html += '<a href="./unit.html?name=' + encodeURIComponent(li.name) + '&lessonId=' + li.lessonId + '" style="background: url(' + li.img + ') center / contain no-repeat;"></a>'
+                    } else {
+                        html += '<a href="./kantingduxie.html?lessonId=' + li.lessonId + '" style="background: url(' + li.img + ') center / contain no-repeat;"></a>'
+                    }
+                })
+                html += '</div></div>'
+            })
+        }
+    })
+    $('#list').html(html)
+    remToPx()
+    if (slider) {
+        slider.destroy(false)
+    }
+    slider = new Swiper('#titles .swiper-container', {
+        loop: false,
+        speed: 1200,
+        allowTouchMove: false,
+        noSwiping: true,
+        navigation: {
+            nextEl: '.title_next',
+            prevEl: '.title_prev'
+        }
+    })
+    if (itemLength == 1) {
+        $('.title_btn').hide()
+    } else {
+        $('.title_btn').show()
+    }
+    if (slider.activeIndex == 0) {
+        $('.title_prev').hide()
+    } else {
+        $('.title_prev').show()
+    }
+    slider.on('slideChangeTransitionEnd', function () {
+        changeURLParam('activeIndex', slider.activeIndex)
+        if(slider.activeIndex==0){
+            $('.title_prev').hide()
+        }else{
+            $('.title_prev').show()
+        }
+        if(slider.activeIndex==itemLength-1){
+            $('.title_next').hide()
+        }else{
+            $('.title_next').show()
+        }
+    })
+    if (getUrlParam('activeIndex')) {
+        slider.slideTo(getUrlParam('activeIndex'))
+    } else {
+        slider.slideTo(0)
+    }
+}
+
+function loadInf () {
+    $('.home_tit1').on('click', function () {
+        window.location.href = './useInfo.html'
+    })
+    $('.home_tit2').on('click', function () {
+        window.location.href = './publishInfo.html'
+    })
+}
+
+$('#home .home_btns').on('mouseenter', 'span', function () {
+    $(this).children('.fl').css('backgroundImage', 'url(../images/home/flower.gif)')
+})
+$('#home .home_btns').on('mouseleave', 'span', function () {
+    $(this).children('.fl').css('backgroundImage', 'url(../images/home/flower1.png)')
+})
+$('#home .home_btns').on('click', 'span', function () {
+    var _this = $(this)
+    curMenu = _this.attr('data-name')
+    if (curMenu !== '读写姿势') {
+        changeURLParam('curMenu', curMenu)
+        changeURLParam('activeIndex', 0)
+        loadList()
+    } else {
+        window.location.href = './duxiezishi.html'
+    }
+})
+$(window).on('load', function () {
+    loopImg('Chinese-beijing', '../images/home/Chinese-beijing', 'png', 1, 88, 10000)
+    if (getUrlParam('curMenu')) {
+        curMenu = getUrlParam('curMenu')
+    } else {
+        changeURLParam('curMenu', curMenu)
+    }
+    loadInf()
+    loadList()
+    $('.bgAudio').off('timeupdate')
+    $('.bgAudio').on('timeupdate', function () {
+        if ($(this)[0].currentTime > 0) {
+            $(this)[0].muted = false
+        }
+    })
+    if (getUrlParam('sound') === 'false') {
+        $('#sound').addClass('nosound')
+        $('.bgAudio').trigger('pause')
+    } else {
+        $('.bgAudio').trigger('play')
+    }
+    //所有按钮的音频绑定
+    playAudio()
+})
+</script>
+</body>
+</html>
